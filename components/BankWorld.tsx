@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import gsap from 'gsap';
 import bankLayout from '@/data/banks.json';
 import {BankInterior} from './BankInterior';
-import type {SectionId} from '@/lib/bank-sections';
+import {sections,type SectionId} from '@/lib/bank-sections';
 import type {OrbitControls as ControlsImpl} from 'three-stdlib';
 
 export type Bank = { ticker: string; position: [number, number, number]; height: number };
@@ -27,6 +27,8 @@ function Tower({ bank, selected, onSelect }: { bank: Bank; selected: boolean; on
           roughness={0.25}
         />
       </mesh>
+      {Array.from({length:9},(_,i)=><mesh key={i} position={[0,.7+i*.65,1.21]}><boxGeometry args={[2.1,.035,.015]}/><meshBasicMaterial color={selected?'#9aeddb':'#48718e'}/></mesh>)}
+      <mesh position={[0,bank.height+.2,0]}><boxGeometry args={[1.7,.4,1.7]}/><meshStandardMaterial color="#315370" metalness={.8} roughness={.2}/></mesh>
       <Html position={[0, bank.height + 1, 0]} center distanceFactor={12}>
         <div style={{color:'white',fontWeight:800,fontSize:16,background:'rgba(0,0,0,.6)',border:'1px solid rgba(255,255,255,.18)',padding:'5px 8px',borderRadius:8,whiteSpace:'nowrap'}}>{bank.ticker}</div>
       </Html>
@@ -68,23 +70,24 @@ function Flow({ bank }: { bank: Bank }) {
   );
 }
 
-type WorldProps={selected:Bank|null;onSelect:(b:Bank)=>void;interior:boolean;section:SectionId|null;metric:string|null;onSection:(s:SectionId)=>void;onMetric:(s:string)=>void};
-function CameraRig({selected,interior}:{selected:Bank|null;interior:boolean}){
+type WorldProps={selected:Bank|null;onSelect:(b:Bank)=>void;interior:boolean;expanded:boolean;section:SectionId|null;metric:string|null;onSection:(s:SectionId)=>void;onMetric:(s:string)=>void};
+function CameraRig({selected,interior,expanded,section}:{selected:Bank|null;interior:boolean;expanded:boolean;section:SectionId|null}){
  const {camera}=useThree();const controls=useRef<ControlsImpl>(null);
  useEffect(()=>{const c=controls.current;if(!c)return;const p=selected?.position??[0,0,0];
- const target=selected?[p[0]+(interior?1.5:0),interior?3:selected.height/2,p[2]]:[0,2,0];
- const pos=selected?[p[0]+(interior?9:5),interior?7:selected.height+4,p[2]+(interior?14:8)]:[0,16,28];
+ const focusY=section?.length?Math.max(2,.7+sections.findIndex(s=>s.id===section)*(expanded?1.6:.75)):3;
+ const target=selected?[p[0]+(interior?1.5:0),interior?focusY:selected.height/2,p[2]]:[0,2,0];
+ const pos=selected?[p[0]+(interior?9:5),interior?focusY+5:selected.height+4,p[2]+(interior?18:8)]:[0,16,28];
  c.enabled=false;const tl=gsap.timeline({onComplete:()=>{c.enabled=true}});
  tl.to(camera.position,{x:pos[0],y:pos[1],z:pos[2],duration:1.6,ease:'power3.inOut'},0).to(c.target,{x:target[0],y:target[1],z:target[2],duration:1.6,ease:'power3.inOut',onUpdate:()=>c.update()},0);
- return()=>{tl.kill();c.enabled=true};},[selected,interior,camera]);
+ return()=>{tl.kill();c.enabled=true};},[selected,interior,expanded,section,camera]);
  return <OrbitControls ref={controls} makeDefault enableDamping dampingFactor={.05} minDistance={4} maxDistance={55} maxPolarAngle={Math.PI/2.05}/>;
 }
 function Scene(props:WorldProps){const {selected,onSelect,interior}=props;return <>
  <color attach="background" args={['#02050a']}/><fog attach="fog" args={['#02050a',24,65]}/>
  <ambientLight intensity={1.1}/><directionalLight position={[15,25,10]} intensity={2.8}/><pointLight position={[0,12,0]} intensity={80} distance={40}/>
- <CameraRig selected={selected} interior={interior}/>
+ <CameraRig selected={selected} interior={interior} expanded={props.expanded} section={props.section}/>
  {!interior&&BANKS.map(b=><Tower key={b.ticker} bank={b} selected={selected?.ticker===b.ticker} onSelect={onSelect}/>)}
- {interior&&selected&&<BankInterior bank={selected} section={props.section} metric={props.metric} onSection={props.onSection} onMetric={props.onMetric}/>}
+ {interior&&selected&&<BankInterior bank={selected} expanded={props.expanded} section={props.section} metric={props.metric} onSection={props.onSection} onMetric={props.onMetric}/>}
  {BANKS.filter(b=>!interior||b.ticker===selected?.ticker).map(b=><Flow key={b.ticker} bank={b}/>)}
  <Grid args={[80,80]} cellSize={1} cellThickness={.5} sectionSize={5} sectionThickness={1} fadeDistance={45} infiniteGrid/>
  </>}
