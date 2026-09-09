@@ -1,0 +1,65 @@
+[
+  {
+    "ticker": "KBANK",
+    "position": [
+      -9,
+      0,
+      0
+    ],
+    "height": 7
+  },
+  {
+    "ticker": "SCB",
+    "position": [
+      -6,
+      0,
+      -3
+    ],
+    "height": 7
+  },
+  {
+    "ticker": "KTB",
+    "position": [
+      -3,
+      0,
+      0
+    ],
+    "height": 7
+  },
+  {
+    "ticker": "BBL",
+    "position": [
+      0,
+      0,
+      -3
+    ],
+    "height": 7
+  },
+  {
+    "ticker": "TTB",
+    "position": [
+      3,
+      0,
+      0
+    ],
+    "height": 7
+  },
+  {
+    "ticker": "KKP",
+    "position": [
+      6,
+      0,
+      -3
+    ],
+    "height": 7
+  },
+  {
+    "ticker": "TISCO",
+    "position": [
+      9,
+      0,
+      0
+    ],
+    "height": 7
+  }
+]

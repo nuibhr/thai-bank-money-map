@@ -1,0 +1,3644 @@
+{
+  "meta": {
+    "dataset": "Thai Bank Data Pack",
+    "prepared_at": "2026-09-09T08:07:00+07:00",
+    "financial_snapshot": "Mostly 2026-06-30 (2Q/1H26)",
+    "market_snapshot": "Latest complete factsheet fields retrieved for 2026-09-07/08 before market open 2026-09-09",
+    "missing_policy": "null means not verified / unavailable; never interpret as zero",
+    "entity_warning": "SCB is SCBX holding company; TISCO is TISCO Financial Group; some bank-only vs group metrics are explicitly tagged.",
+    "workbook_sheets": [
+      "README",
+      "Bank_Snapshot",
+      "Loan_Mix",
+      "Funding_Mix",
+      "Asset_Quality",
+      "Revenue_Mix",
+      "Capital_Entity",
+      "Market_Valuation",
+      "Macro_System",
+      "3D_Data_Map",
+      "Data_Dictionary",
+      "RAG_Pipeline",
+      "RAG_Document_Checklist",
+      "Sources",
+      "Coverage_Map"
+    ],
+    "recommended_field_count": 184
+  },
+  "banks": [
+    {
+      "ticker": "KBANK",
+      "listed_entity": "KASIKORNBANK PCL",
+      "entity_level": "Consolidated bank / financial conglomerate where stated",
+      "fin_period_end": "2026-06-30",
+      "report_status": "Official unaudited Q2 + analyst presentation",
+      "assets": 4570971,
+      "loans": 2558943,
+      "deposits": 2918027,
+      "equity_attrib": 576284,
+      "q2_profit": 13247,
+      "h1_profit": 27915,
+      "q2_nii": 31432,
+      "h1_nii": 63390,
+      "q2_noninterest": 18291,
+      "q2_netfees": 10391,
+      "q2_opex": 20750,
+      "q2_ecl": 10019,
+      "nim_q2": 2.9,
+      "nim_h1": 2.91,
+      "roa_q2": 1.16,
+      "roe_q2": 9.11,
+      "roe_h1": 9.65,
+      "cost_income": 41.73,
+      "npl_pct": 3.18,
+      "npl_mn": null,
+      "stage2_pct": 7.45,
+      "credit_cost_q2": 160,
+      "credit_cost_h1": 158,
+      "coverage": 173.9,
+      "car": 19.24,
+      "tier1": 17.35,
+      "cet1": null,
+      "ldr": 87.69,
+      "casa": 83.0,
+      "loan_growth_ytd": 3.32,
+      "deposit_growth_ytd": 2.37,
+      "yield_loans": 4.68,
+      "earning_asset_yield": 3.7,
+      "cost_fund": 1.07,
+      "cost_deposit": 0.94,
+      "notes": "Stage2-like field uses Significant Increase in Credit Risk loans ratio 7.45%; financial-conglomerate capital ratios. Loan portfolio mix in Loan_Mix uses the 1Q26 business definition because the 2Q analyst slide retained that composition table while balance-sheet loans are 30 Jun 2026.",
+      "sources": "SRC-KBANK-Q2-FS; SRC-KBANK-Q2-PRES"
+    },
+    {
+      "ticker": "SCB",
+      "listed_entity": "SCB X PCL",
+      "entity_level": "Holding company / group; loan and capital data at group portfolio level",
+      "fin_period_end": "2026-06-30",
+      "report_status": "Official reviewed Q2 available; IR highlights/press release used",
+      "assets": null,
+      "loans": 2405000,
+      "deposits": null,
+      "equity_attrib": null,
+      "q2_profit": 11117,
+      "h1_profit": null,
+      "q2_nii": 27306,
+      "h1_nii": null,
+      "q2_noninterest": null,
+      "q2_netfees": null,
+      "q2_opex": 17042,
+      "q2_ecl": null,
+      "nim_q2": null,
+      "nim_h1": null,
+      "roa_q2": null,
+      "roe_q2": null,
+      "roe_h1": null,
+      "cost_income": 41.3,
+      "npl_pct": 3.17,
+      "npl_mn": null,
+      "stage2_pct": null,
+      "credit_cost_q2": null,
+      "credit_cost_h1": null,
+      "coverage": 158.6,
+      "car": 18.6,
+      "tier1": null,
+      "cet1": 17.4,
+      "ldr": null,
+      "casa": null,
+      "loan_growth_ytd": null,
+      "deposit_growth_ytd": null,
+      "yield_loans": null,
+      "earning_asset_yield": null,
+      "cost_fund": null,
+      "cost_deposit": null,
+      "notes": "SCB ticker represents SCBX holding company. 2Q loan portfolio is split by company (SCB Bank, CardX, AutoX, MONIX, ABACUS digital, others), not by economic sector. Non-interest figure here is constructed as fee & other income plus investment/trading income for visual revenue-layer use, not a standardized accounting subtotal.",
+      "sources": "SRC-SCBX-Q2-PR; SRC-SCBX-HIGHLIGHTS; SRC-SCBX-QRESULTS"
+    },
+    {
+      "ticker": "KTB",
+      "listed_entity": "KRUNG THAI BANK PCL",
+      "entity_level": "Consolidated bank / financial group capital where stated",
+      "fin_period_end": "2026-06-30",
+      "report_status": "Official Q2 MD&A / SET filing",
+      "assets": 3875705,
+      "loans": 2809145,
+      "deposits": 2856976,
+      "equity_attrib": 452907,
+      "q2_profit": 12125,
+      "h1_profit": 24562,
+      "q2_nii": 23261,
+      "h1_nii": 46699,
+      "q2_noninterest": 14219,
+      "q2_netfees": 6144,
+      "q2_opex": 14582,
+      "q2_ecl": 6620,
+      "nim_q2": 2.45,
+      "nim_h1": 2.47,
+      "roa_q2": 1.25,
+      "roe_q2": 10.54,
+      "roe_h1": 10.8,
+      "cost_income": 38.9,
+      "npl_pct": 2.92,
+      "npl_mn": 93706,
+      "stage2_pct": null,
+      "credit_cost_q2": 95,
+      "credit_cost_h1": 105,
+      "coverage": 205.2,
+      "car": 20.7,
+      "tier1": null,
+      "cet1": 18.7,
+      "ldr": 98.32,
+      "casa": 80.0,
+      "loan_growth_ytd": 3.6,
+      "deposit_growth_ytd": -0.3,
+      "yield_loans": null,
+      "earning_asset_yield": 3.36,
+      "cost_fund": 1.07,
+      "cost_deposit": null,
+      "notes": "Loans column is gross loans before deferred revenue; equity attributable to bank shareholders. CET1 is financial business group CET1. Loan mix in Loan_Mix is 30 Jun 2026 and highly detailed.",
+      "sources": "SRC-KTB-Q2-MDA"
+    },
+    {
+      "ticker": "BBL",
+      "listed_entity": "BANGKOK BANK PCL",
+      "entity_level": "Consolidated bank",
+      "fin_period_end": "2026-06-30",
+      "report_status": "Official 1H26 financial highlights",
+      "assets": 4681447,
+      "loans": 2678467,
+      "deposits": 3212308,
+      "equity_attrib": null,
+      "q2_profit": null,
+      "h1_profit": 20492,
+      "q2_nii": null,
+      "h1_nii": 55744,
+      "q2_noninterest": null,
+      "q2_netfees": null,
+      "q2_opex": null,
+      "q2_ecl": null,
+      "nim_q2": null,
+      "nim_h1": 2.46,
+      "roa_q2": null,
+      "roe_q2": null,
+      "roe_h1": 7.16,
+      "cost_income": 47.1,
+      "npl_pct": 3.3,
+      "npl_mn": 105261,
+      "stage2_pct": null,
+      "credit_cost_q2": null,
+      "credit_cost_h1": null,
+      "coverage": 306.3,
+      "car": 21.4,
+      "tier1": 16.9,
+      "cet1": 16.9,
+      "ldr": 83.4,
+      "casa": null,
+      "loan_growth_ytd": 2.7,
+      "deposit_growth_ytd": 0.5,
+      "yield_loans": null,
+      "earning_asset_yield": null,
+      "cost_fund": null,
+      "cost_deposit": null,
+      "notes": "BBL source page discloses 1H rather than all Q2 ratios. Loan growth driven by large corporate and international portfolios per official release. Leave Q2-only cells blank until detailed MD&A ingestion.",
+      "sources": "SRC-BBL-FININFO; SRC-BBL-Q2-PR"
+    },
+    {
+      "ticker": "TTB",
+      "listed_entity": "TMBTHANACHART BANK PCL",
+      "entity_level": "Bank and subsidiaries",
+      "fin_period_end": "2026-06-30",
+      "report_status": "Official 2Q/1H26 investor release",
+      "assets": null,
+      "loans": 1184000,
+      "deposits": 1274000,
+      "equity_attrib": null,
+      "q2_profit": 5513,
+      "h1_profit": 10683,
+      "q2_nii": null,
+      "h1_nii": null,
+      "q2_noninterest": null,
+      "q2_netfees": null,
+      "q2_opex": 8051,
+      "q2_ecl": 4040,
+      "nim_q2": null,
+      "nim_h1": null,
+      "roa_q2": null,
+      "roe_q2": null,
+      "roe_h1": null,
+      "cost_income": 46.0,
+      "npl_pct": 2.93,
+      "npl_mn": 39000,
+      "stage2_pct": null,
+      "credit_cost_q2": null,
+      "credit_cost_h1": 136,
+      "coverage": 157.0,
+      "car": 19.0,
+      "tier1": 17.0,
+      "cet1": null,
+      "ldr": null,
+      "casa": null,
+      "loan_growth_ytd": -1.8,
+      "deposit_growth_ytd": 0.4,
+      "yield_loans": null,
+      "earning_asset_yield": null,
+      "cost_fund": null,
+      "cost_deposit": null,
+      "notes": "Press release does not provide full NIM/ROE set; intentionally blank rather than using secondary analyst numbers. Buyback program can be stored separately as capital-return metadata.",
+      "sources": "SRC-TTB-Q2"
+    },
+    {
+      "ticker": "KKP",
+      "listed_entity": "KIATNAKIN PHATRA BANK PCL",
+      "entity_level": "Consolidated bank and capital-markets subsidiaries",
+      "fin_period_end": "2026-06-30",
+      "report_status": "Official Q2 IR/SEC source set",
+      "assets": 528700.406,
+      "loans": 354075,
+      "deposits": 356617,
+      "equity_attrib": 69013.79,
+      "q2_profit": 2122.087,
+      "h1_profit": 4078,
+      "q2_nii": 4329,
+      "h1_nii": null,
+      "q2_noninterest": 2558,
+      "q2_netfees": null,
+      "q2_opex": 3200,
+      "q2_ecl": 970,
+      "nim_q2": null,
+      "nim_h1": null,
+      "roa_q2": 1.6,
+      "roe_q2": 12.4,
+      "roe_h1": 12.2,
+      "cost_income": 42.9,
+      "npl_pct": 3.5,
+      "npl_mn": 12309,
+      "stage2_pct": null,
+      "credit_cost_q2": 143,
+      "credit_cost_h1": 146,
+      "coverage": 150.7,
+      "car": null,
+      "tier1": null,
+      "cet1": null,
+      "ldr": 91.2,
+      "casa": 53.6,
+      "loan_growth_ytd": 3.1,
+      "deposit_growth_ytd": null,
+      "yield_loans": 6.2,
+      "earning_asset_yield": null,
+      "cost_fund": 1.7,
+      "cost_deposit": null,
+      "notes": "Gross/customer-loan definitions vary by source; Loan_Mix uses KKP Q2 management presentation categories and amounts. SEC lists Q2 2026 consolidated statements; IR presentation is the preferred source for operating ratios.",
+      "sources": "SRC-KKP-PRES; SRC-KKP-SEC; SRC-KKP-IR"
+    },
+    {
+      "ticker": "TISCO",
+      "listed_entity": "TISCO FINANCIAL GROUP PCL",
+      "entity_level": "Financial holding group; capital ratios separately disclose Group and TISCO Bank",
+      "fin_period_end": "2026-06-30",
+      "report_status": "Official 2Q26 MD&A; values from unreviewed MD&A, reviewed filing later listed",
+      "assets": 290027.11,
+      "loans": 235802.78,
+      "deposits": 214801.29,
+      "equity_attrib": 42473.69,
+      "q2_profit": 1763.85,
+      "h1_profit": 3497.47,
+      "q2_nii": 3523.53,
+      "h1_nii": 6966.64,
+      "q2_noninterest": 1558.15,
+      "q2_netfees": 1383.63,
+      "q2_opex": 2341.65,
+      "q2_ecl": 550.91,
+      "nim_q2": 4.98,
+      "nim_h1": null,
+      "roa_q2": null,
+      "roe_q2": 16.1,
+      "roe_h1": 16.3,
+      "cost_income": 46.1,
+      "npl_pct": 2.12,
+      "npl_mn": 4993.55,
+      "stage2_pct": null,
+      "credit_cost_q2": 90,
+      "credit_cost_h1": 110,
+      "coverage": 190.2,
+      "car": 19.3,
+      "tier1": 17.0,
+      "cet1": null,
+      "ldr": null,
+      "casa": null,
+      "loan_growth_ytd": 0.0,
+      "deposit_growth_ytd": 1.6,
+      "yield_loans": 7.34,
+      "earning_asset_yield": null,
+      "cost_fund": 1.58,
+      "cost_deposit": null,
+      "notes": "TISCO cost/income 46.1% directly reported. Stage 2 amount and calculated ratio are stored in asset_quality; L/D is calculated from loans/deposits in funding_mix rather than hard-coded. Group projected BIS/Tier1 19.3%/17.0%; TISCO Bank 20.6%/18.2%.",
+      "sources": "SRC-TISCO-Q2-MDA; SRC-TISCO-PRES"
+    }
+  ],
+  "market": [
+    {
+      "ticker": "KBANK",
+      "as_of": "2026-09-08",
+      "price": 248.0,
+      "market_cap": 587593.24,
+      "pe": 11.39,
+      "pbv": 1.01,
+      "dividend_yield": null,
+      "source": "SRC-SET-KBANK",
+      "note": "SET factsheet body captured as of 8 Sep; search-result header showed an inconsistent title price, so body fields were used."
+    },
+    {
+      "ticker": "SCB",
+      "as_of": "2026-09-07",
+      "price": 152.0,
+      "market_cap": 511800.31,
+      "pe": 11.76,
+      "pbv": 1.06,
+      "dividend_yield": null,
+      "source": "SRC-SET-SCB",
+      "note": "Latest complete SET factsheet snapshot retrieved in research; not forced to 8 Sep where complete fields were unavailable."
+    },
+    {
+      "ticker": "KTB",
+      "as_of": "2026-09-08",
+      "price": 43.75,
+      "market_cap": 611452.68,
+      "pe": 12.24,
+      "pbv": 1.35,
+      "dividend_yield": null,
+      "source": "SRC-SET-KTB",
+      "note": "SET factsheet."
+    },
+    {
+      "ticker": "BBL",
+      "as_of": "2026-09-08",
+      "price": 192.5,
+      "market_cap": 367452.26,
+      "pe": 8.74,
+      "pbv": 0.64,
+      "dividend_yield": null,
+      "source": "SRC-SET-BBL",
+      "note": "Price/market cap/P-E as of 8 Sep; P/BV latest complete value retrieved as of 7 Sep."
+    },
+    {
+      "ticker": "TTB",
+      "as_of": "2026-09-08",
+      "price": 2.92,
+      "market_cap": 284908.31,
+      "pe": 12.04,
+      "pbv": 1.1,
+      "dividend_yield": null,
+      "source": "SRC-SET-TTB",
+      "note": "Market cap retrieved as of 8 Sep; price/P-E/P-BV latest complete snapshot around 7-8 Sep."
+    },
+    {
+      "ticker": "KKP",
+      "as_of": "2026-09-08",
+      "price": 119.0,
+      "market_cap": 106555.44,
+      "pe": 13.62,
+      "pbv": 1.48,
+      "dividend_yield": null,
+      "source": "SRC-SET-KKP",
+      "note": "SET factsheet; KKP IR home also displayed 119.00 on 8 Sep 2026."
+    },
+    {
+      "ticker": "TISCO",
+      "as_of": "2026-09-07",
+      "price": 126.0,
+      "market_cap": 100881.35,
+      "pe": 14.69,
+      "pbv": 2.38,
+      "dividend_yield": null,
+      "source": "SRC-SET-TISCO",
+      "note": "Latest complete SET factsheet snapshot retrieved."
+    }
+  ],
+  "loan_mix": [
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "Private Corporate",
+      "amount": 651846,
+      "share": 23.2,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "Government + SOE",
+      "amount": 632529,
+      "share": 22.5,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "SME",
+      "amount": 266538,
+      "share": 9.5,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "Retail",
+      "amount": 1257905,
+      "share": 44.8,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "Housing",
+      "amount": 548762,
+      "share": 19.5,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "Personal",
+      "amount": 638079,
+      "share": 22.7,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "Credit Card",
+      "amount": 69721,
+      "share": 2.5,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "Leasing",
+      "amount": 1343,
+      "share": 0.1,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "taxonomy": "Business segment",
+      "category": "Others",
+      "amount": 327,
+      "share": 0.0,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KTB-Q2-MDA",
+      "note": "Retail subcategories are also included; do not sum parent and child rows together."
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "taxonomy": "Loan type",
+      "category": "Hire purchase",
+      "amount": 104924.64,
+      "share": null,
+      "growth_qoq": 1.3,
+      "growth_ytd": 2.2,
+      "npl_amount": 2580.52,
+      "npl_ratio": 2.46,
+      "status": "REPORTED",
+      "source": "SRC-TISCO-Q2-MDA",
+      "note": "TISCO group loan disclosure; parent Retail row overlaps its subcategories."
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "taxonomy": "Loan type",
+      "category": "Loans against auto licenses",
+      "amount": 42025.92,
+      "share": null,
+      "growth_qoq": -1.2,
+      "growth_ytd": -2.7,
+      "npl_amount": 2015.01,
+      "npl_ratio": 4.79,
+      "status": "REPORTED",
+      "source": "SRC-TISCO-Q2-MDA",
+      "note": "TISCO group loan disclosure; parent Retail row overlaps its subcategories."
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "taxonomy": "Loan type",
+      "category": "Housing loans",
+      "amount": 5728.62,
+      "share": null,
+      "growth_qoq": -4.3,
+      "growth_ytd": -7.8,
+      "npl_amount": 269.03,
+      "npl_ratio": 4.7,
+      "status": "REPORTED",
+      "source": "SRC-TISCO-Q2-MDA",
+      "note": "TISCO group loan disclosure; parent Retail row overlaps its subcategories."
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "taxonomy": "Loan type",
+      "category": "Other retail",
+      "amount": 9910.95,
+      "share": null,
+      "growth_qoq": 2.6,
+      "growth_ytd": 5.5,
+      "npl_amount": 15.31,
+      "npl_ratio": 0.15,
+      "status": "REPORTED",
+      "source": "SRC-TISCO-Q2-MDA",
+      "note": "TISCO group loan disclosure; parent Retail row overlaps its subcategories."
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "taxonomy": "Loan type",
+      "category": "Retail loans",
+      "amount": 162590.12,
+      "share": null,
+      "growth_qoq": 0.5,
+      "growth_ytd": 0.7,
+      "npl_amount": 4879.87,
+      "npl_ratio": 3.0,
+      "status": "REPORTED",
+      "source": "SRC-TISCO-Q2-MDA",
+      "note": "TISCO group loan disclosure; parent Retail row overlaps its subcategories."
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "taxonomy": "Loan type",
+      "category": "Corporate loans",
+      "amount": 58992.58,
+      "share": null,
+      "growth_qoq": -1.8,
+      "growth_ytd": -3.2,
+      "npl_amount": 0,
+      "npl_ratio": 0,
+      "status": "REPORTED",
+      "source": "SRC-TISCO-Q2-MDA",
+      "note": "TISCO group loan disclosure; parent Retail row overlaps its subcategories."
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "taxonomy": "Loan type",
+      "category": "Commercial loans",
+      "amount": 14220.08,
+      "share": null,
+      "growth_qoq": 7.3,
+      "growth_ytd": 6.9,
+      "npl_amount": 113.68,
+      "npl_ratio": 0.8,
+      "status": "REPORTED",
+      "source": "SRC-TISCO-Q2-MDA",
+      "note": "TISCO group loan disclosure; parent Retail row overlaps its subcategories."
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "taxonomy": "Loan type",
+      "category": "Total loans",
+      "amount": 235802.78,
+      "share": 100.0,
+      "growth_qoq": 0.3,
+      "growth_ytd": 0.0,
+      "npl_amount": 4993.55,
+      "npl_ratio": 2.12,
+      "status": "REPORTED",
+      "source": "SRC-TISCO-Q2-MDA",
+      "note": "Total loans and receivables."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Auto hire purchase",
+      "amount": 143876,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 3358,
+      "npl_ratio": 2.3,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Personal",
+      "amount": 11109,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 96,
+      "npl_ratio": 0.9,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Micro SME",
+      "amount": 12566,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 511,
+      "npl_ratio": 4.1,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Housing",
+      "amount": 57862,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 735,
+      "npl_ratio": 1.3,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Retail total",
+      "amount": 225413,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 4699,
+      "npl_ratio": 2.1,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Real estate business",
+      "amount": 22054,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 2415,
+      "npl_ratio": 11.0,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Business SME",
+      "amount": 34292,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 1675,
+      "npl_ratio": 4.9,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Business total",
+      "amount": 56346,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 4090,
+      "npl_ratio": 7.3,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Corporate",
+      "amount": 64705,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 3087,
+      "npl_ratio": 4.8,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Debt management",
+      "amount": 1154,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Business / product",
+      "category": "Lombard",
+      "amount": 6457,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows."
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "taxonomy": "Asset quality",
+      "category": "Overall impaired loans",
+      "amount": null,
+      "share": null,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": 12720,
+      "npl_ratio": 3.6,
+      "status": "REPORTED",
+      "source": "SRC-KKP-PRES",
+      "note": "Overall impairment ratio; ex-POCI management ratio cited around 3.5%."
+    },
+    {
+      "ticker": "SCB",
+      "period": "2026-06-30",
+      "taxonomy": "Loan portfolio by company",
+      "category": "Siam Commercial Bank",
+      "amount": null,
+      "share": 92.4,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "CALCULATED_FROM_SHARE",
+      "source": "SRC-SCBX-HIGHLIGHTS",
+      "note": "Total group loans THB 2,405 bn; amount is calculated in workbook as total × share."
+    },
+    {
+      "ticker": "SCB",
+      "period": "2026-06-30",
+      "taxonomy": "Loan portfolio by company",
+      "category": "CardX",
+      "amount": null,
+      "share": 4.0,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "CALCULATED_FROM_SHARE",
+      "source": "SRC-SCBX-HIGHLIGHTS",
+      "note": "Total group loans THB 2,405 bn; amount is calculated in workbook as total × share."
+    },
+    {
+      "ticker": "SCB",
+      "period": "2026-06-30",
+      "taxonomy": "Loan portfolio by company",
+      "category": "AutoX",
+      "amount": null,
+      "share": 1.9,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "CALCULATED_FROM_SHARE",
+      "source": "SRC-SCBX-HIGHLIGHTS",
+      "note": "Total group loans THB 2,405 bn; amount is calculated in workbook as total × share."
+    },
+    {
+      "ticker": "SCB",
+      "period": "2026-06-30",
+      "taxonomy": "Loan portfolio by company",
+      "category": "MONIX",
+      "amount": null,
+      "share": 0.8,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "CALCULATED_FROM_SHARE",
+      "source": "SRC-SCBX-HIGHLIGHTS",
+      "note": "Total group loans THB 2,405 bn; amount is calculated in workbook as total × share."
+    },
+    {
+      "ticker": "SCB",
+      "period": "2026-06-30",
+      "taxonomy": "Loan portfolio by company",
+      "category": "ABACUS digital",
+      "amount": null,
+      "share": 0.3,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "CALCULATED_FROM_SHARE",
+      "source": "SRC-SCBX-HIGHLIGHTS",
+      "note": "Total group loans THB 2,405 bn; amount is calculated in workbook as total × share."
+    },
+    {
+      "ticker": "SCB",
+      "period": "2026-06-30",
+      "taxonomy": "Loan portfolio by company",
+      "category": "Others",
+      "amount": null,
+      "share": 0.6,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "CALCULATED_FROM_SHARE",
+      "source": "SRC-SCBX-HIGHLIGHTS",
+      "note": "Total group loans THB 2,405 bn; amount is calculated in workbook as total × share."
+    },
+    {
+      "ticker": "KBANK",
+      "period": "2026-03-31",
+      "taxonomy": "Business segment",
+      "category": "Corporate",
+      "amount": 991000,
+      "share": 41,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED_OLDER_MIX",
+      "source": "SRC-KBANK-Q2-PRES",
+      "note": "Business mix table shown in 2Q26 analyst deck reports 1Q26 composition; financial snapshot itself is 30 Jun 2026. Keep period explicit."
+    },
+    {
+      "ticker": "KBANK",
+      "period": "2026-03-31",
+      "taxonomy": "Business segment",
+      "category": "SME",
+      "amount": 588000,
+      "share": 24,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED_OLDER_MIX",
+      "source": "SRC-KBANK-Q2-PRES",
+      "note": "Business mix table shown in 2Q26 analyst deck reports 1Q26 composition; financial snapshot itself is 30 Jun 2026. Keep period explicit."
+    },
+    {
+      "ticker": "KBANK",
+      "period": "2026-03-31",
+      "taxonomy": "Business segment",
+      "category": "Retail",
+      "amount": 770000,
+      "share": 31,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED_OLDER_MIX",
+      "source": "SRC-KBANK-Q2-PRES",
+      "note": "Business mix table shown in 2Q26 analyst deck reports 1Q26 composition; financial snapshot itself is 30 Jun 2026. Keep period explicit."
+    },
+    {
+      "ticker": "KBANK",
+      "period": "2026-03-31",
+      "taxonomy": "Business segment",
+      "category": "Other",
+      "amount": 105000,
+      "share": 4,
+      "growth_qoq": null,
+      "growth_ytd": null,
+      "npl_amount": null,
+      "npl_ratio": null,
+      "status": "REPORTED_OLDER_MIX",
+      "source": "SRC-KBANK-Q2-PRES",
+      "note": "Business mix table shown in 2Q26 analyst deck reports 1Q26 composition; financial snapshot itself is 30 Jun 2026. Keep period explicit."
+    }
+  ],
+  "macro": [
+    {
+      "category": "Monetary policy",
+      "metric": "BOT policy rate",
+      "value": 1.0,
+      "unit": "%",
+      "ref_period": "2026-08-26",
+      "status": "Official current decision",
+      "source": "SRC-BOT-MPC",
+      "note": "MPC unanimously maintained the policy rate at 1.00%."
+    },
+    {
+      "category": "Forecast",
+      "metric": "Thailand GDP growth 2026",
+      "value": 2.3,
+      "unit": "%",
+      "ref_period": "2026 forecast (as of 2026-06-24)",
+      "status": "Official forecast",
+      "source": "SRC-BOT-OUTLOOK",
+      "note": "BOT forecast."
+    },
+    {
+      "category": "Forecast",
+      "metric": "Thailand GDP growth 2027",
+      "value": 1.8,
+      "unit": "%",
+      "ref_period": "2027 forecast (as of 2026-06-24)",
+      "status": "Official forecast",
+      "source": "SRC-BOT-OUTLOOK",
+      "note": "BOT forecast."
+    },
+    {
+      "category": "Forecast",
+      "metric": "Headline inflation 2026",
+      "value": 2.8,
+      "unit": "%",
+      "ref_period": "2026 forecast (as of 2026-06-24)",
+      "status": "Official forecast",
+      "source": "SRC-BOT-OUTLOOK",
+      "note": "BOT forecast."
+    },
+    {
+      "category": "Forecast",
+      "metric": "Core inflation 2026",
+      "value": 1.5,
+      "unit": "%",
+      "ref_period": "2026 forecast (as of 2026-06-24)",
+      "status": "Official forecast",
+      "source": "SRC-BOT-OUTLOOK",
+      "note": "BOT forecast."
+    },
+    {
+      "category": "Banking system",
+      "metric": "Loan growth YoY",
+      "value": 2.0,
+      "unit": "%",
+      "ref_period": "2Q 2026",
+      "status": "Official actual",
+      "source": "SRC-BOT-Q2SYS",
+      "note": "Thai banking system."
+    },
+    {
+      "category": "Banking system",
+      "metric": "NPL amount",
+      "value": 534800,
+      "unit": "THB mn",
+      "ref_period": "2Q 2026",
+      "status": "Official actual",
+      "source": "SRC-BOT-Q2SYS",
+      "note": "Stage 3 loans / NPL amount."
+    },
+    {
+      "category": "Banking system",
+      "metric": "NPL ratio",
+      "value": 2.82,
+      "unit": "%",
+      "ref_period": "2Q 2026",
+      "status": "Official actual",
+      "source": "SRC-BOT-Q2SYS",
+      "note": "Thai banking system."
+    },
+    {
+      "category": "Banking system",
+      "metric": "Stage 2 ratio",
+      "value": 6.78,
+      "unit": "%",
+      "ref_period": "2Q 2026",
+      "status": "Official actual",
+      "source": "SRC-BOT-Q2SYS",
+      "note": "Thai banking system."
+    },
+    {
+      "category": "Activity",
+      "metric": "Private consumption growth YoY",
+      "value": 3.2,
+      "unit": "%",
+      "ref_period": "Jul 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Activity",
+      "metric": "Private investment growth YoY",
+      "value": 12.9,
+      "unit": "%",
+      "ref_period": "Jul 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Activity",
+      "metric": "Manufacturing Production Index growth YoY",
+      "value": 0.5,
+      "unit": "%",
+      "ref_period": "Jul 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "External",
+      "metric": "Exports growth YoY",
+      "value": 22.3,
+      "unit": "%",
+      "ref_period": "Jul 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Tourism",
+      "metric": "Tourist arrivals YTD",
+      "value": 18.6,
+      "unit": "million persons",
+      "ref_period": "Jul 2026 YTD",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "External",
+      "metric": "Current account",
+      "value": -1.6,
+      "unit": "USD bn",
+      "ref_period": "Jul 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Inflation",
+      "metric": "Headline inflation YoY",
+      "value": 2.53,
+      "unit": "%",
+      "ref_period": "Aug 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Inflation",
+      "metric": "Core inflation YoY",
+      "value": 1.44,
+      "unit": "%",
+      "ref_period": "Aug 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Labor",
+      "metric": "Unemployment rate",
+      "value": 0.89,
+      "unit": "%",
+      "ref_period": "2Q 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Credit",
+      "metric": "Private credit growth YoY",
+      "value": 2.7,
+      "unit": "%",
+      "ref_period": "Jul 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Confidence",
+      "metric": "Business Sentiment Index",
+      "value": 49.8,
+      "unit": "index",
+      "ref_period": "Aug 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    },
+    {
+      "category": "Confidence",
+      "metric": "Business Sentiment Index 3-month expected",
+      "value": 50.5,
+      "unit": "index",
+      "ref_period": "Aug 2026",
+      "status": "Official current indicator",
+      "source": "SRC-BOT-ECON",
+      "note": "BOT current-statistics page."
+    }
+  ],
+  "data_dictionary": [
+    {
+      "group": "Identity & provenance",
+      "field": "ticker",
+      "dtype": "string",
+      "description": "Stock ticker used by SET",
+      "use": "Core 3D node key",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "legal_name",
+      "dtype": "string",
+      "description": "Legal entity name",
+      "use": "Entity disambiguation",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "listed_entity",
+      "dtype": "string",
+      "description": "Listed company/holding entity",
+      "use": "Avoid group-vs-bank mixing",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "entity_level",
+      "dtype": "enum",
+      "description": "Holding / consolidated bank / bank-only / financial group",
+      "use": "Critical comparability flag",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "reporting_period",
+      "dtype": "date/quarter",
+      "description": "Reference financial period",
+      "use": "Time machine",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "report_status",
+      "dtype": "enum",
+      "description": "Audited/reviewed/unaudited/company-reported",
+      "use": "Confidence",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "source_id",
+      "dtype": "string",
+      "description": "Source register key",
+      "use": "RAG provenance",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "source_url",
+      "dtype": "url",
+      "description": "Primary/official source",
+      "use": "Audit trail",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "published_at",
+      "dtype": "datetime",
+      "description": "Publication date",
+      "use": "Freshness",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "retrieved_at",
+      "dtype": "datetime",
+      "description": "Retrieval timestamp",
+      "use": "Refresh pipeline",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "data_status",
+      "dtype": "enum",
+      "description": "reported/calculated/model_estimate/illustrative/unavailable",
+      "use": "UI badge",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "currency",
+      "dtype": "string",
+      "description": "Reporting currency",
+      "use": "Normalization",
+      "priority": "P0"
+    },
+    {
+      "group": "Identity & provenance",
+      "field": "unit_scale",
+      "dtype": "string",
+      "description": "THB mn / THB bn / percent / bps",
+      "use": "Correct calculations",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "total_assets",
+      "dtype": "number",
+      "description": "Total assets",
+      "use": "Tower size",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "cash",
+      "dtype": "number",
+      "description": "Cash",
+      "use": "Liquidity",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "interbank_assets",
+      "dtype": "number",
+      "description": "Interbank and money market assets",
+      "use": "Liquidity",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "investments",
+      "dtype": "number",
+      "description": "Investment portfolio",
+      "use": "Asset allocation",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "gross_loans",
+      "dtype": "number",
+      "description": "Gross/customer loans",
+      "use": "Loan engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "net_loans",
+      "dtype": "number",
+      "description": "Loans after allowance / adjustments",
+      "use": "Balance sheet",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "allowance_ecl",
+      "dtype": "number",
+      "description": "Allowance for expected credit loss",
+      "use": "Risk reserve",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "accrued_interest_receivable",
+      "dtype": "number",
+      "description": "Accrued interest",
+      "use": "Asset reconciliation",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "other_assets",
+      "dtype": "number",
+      "description": "Other assets",
+      "use": "Balance sheet",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "total_liabilities",
+      "dtype": "number",
+      "description": "Total liabilities",
+      "use": "Funding core",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "total_deposits",
+      "dtype": "number",
+      "description": "Deposits",
+      "use": "Deposit city",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "borrowings",
+      "dtype": "number",
+      "description": "Borrowings/debentures",
+      "use": "Funding source",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "interbank_liabilities",
+      "dtype": "number",
+      "description": "Interbank liabilities",
+      "use": "Funding",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "other_liabilities",
+      "dtype": "number",
+      "description": "Other liabilities",
+      "use": "Balance sheet",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "shareholders_equity",
+      "dtype": "number",
+      "description": "Total shareholders equity",
+      "use": "Capital/ROE",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "equity_attributable",
+      "dtype": "number",
+      "description": "Equity attributable to owners",
+      "use": "ROE/BVPS",
+      "priority": "P0"
+    },
+    {
+      "group": "Balance sheet",
+      "field": "risk_weighted_assets",
+      "dtype": "number",
+      "description": "RWA",
+      "use": "Capital denominator",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "current_deposits",
+      "dtype": "number",
+      "description": "Current account deposits",
+      "use": "CASA",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "savings_deposits",
+      "dtype": "number",
+      "description": "Savings deposits",
+      "use": "CASA",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "fixed_deposits",
+      "dtype": "number",
+      "description": "Term/fixed deposits",
+      "use": "Funding cost",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "certificate_deposits",
+      "dtype": "number",
+      "description": "NCD/CD deposits",
+      "use": "Funding mix",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "casa_ratio",
+      "dtype": "percent",
+      "description": "Current+savings share",
+      "use": "Funding franchise",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "wholesale_funding",
+      "dtype": "number",
+      "description": "Wholesale funding",
+      "use": "Funding risk",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "cost_of_deposits",
+      "dtype": "percent",
+      "description": "Deposit cost",
+      "use": "NIM engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "cost_of_funds",
+      "dtype": "percent",
+      "description": "Overall funding cost",
+      "use": "NIM engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "loan_to_deposit",
+      "dtype": "percent",
+      "description": "Loan/deposit ratio",
+      "use": "Liquidity",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "lcr",
+      "dtype": "percent",
+      "description": "Liquidity coverage ratio",
+      "use": "Liquidity mode",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "high_quality_liquid_assets",
+      "dtype": "number",
+      "description": "HQLA",
+      "use": "Liquidity buffer",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "deposit_growth_qoq",
+      "dtype": "percent",
+      "description": "Deposit growth QoQ",
+      "use": "Flow speed",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "deposit_growth_ytd",
+      "dtype": "percent",
+      "description": "Deposit growth YTD",
+      "use": "Funding trend",
+      "priority": "P0"
+    },
+    {
+      "group": "Funding & liquidity",
+      "field": "deposit_growth_yoy",
+      "dtype": "percent",
+      "description": "Deposit growth YoY",
+      "use": "Funding trend",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "total_loans",
+      "dtype": "number",
+      "description": "Total loans",
+      "use": "Loan engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "loan_growth_qoq",
+      "dtype": "percent",
+      "description": "Loan growth QoQ",
+      "use": "Flow speed",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "loan_growth_ytd",
+      "dtype": "percent",
+      "description": "Loan growth YTD",
+      "use": "Flow speed",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "loan_growth_yoy",
+      "dtype": "percent",
+      "description": "Loan growth YoY",
+      "use": "Flow trend",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "new_lending",
+      "dtype": "number",
+      "description": "New loan originations",
+      "use": "Growth engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "corporate_loans",
+      "dtype": "number",
+      "description": "Corporate loans",
+      "use": "Sector pipe",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "sme_loans",
+      "dtype": "number",
+      "description": "SME loans",
+      "use": "Sector pipe",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "government_soe_loans",
+      "dtype": "number",
+      "description": "Gov/SOE loans",
+      "use": "Sector pipe",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "retail_loans",
+      "dtype": "number",
+      "description": "Retail loans",
+      "use": "Sector pipe",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "housing_loans",
+      "dtype": "number",
+      "description": "Housing loans",
+      "use": "Property zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "auto_hp_loans",
+      "dtype": "number",
+      "description": "Auto hire purchase",
+      "use": "Auto zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "auto_title_loans",
+      "dtype": "number",
+      "description": "Loans against auto licenses/title",
+      "use": "Consumer zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "personal_loans",
+      "dtype": "number",
+      "description": "Personal loans",
+      "use": "Consumer zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "credit_card_loans",
+      "dtype": "number",
+      "description": "Credit card receivables",
+      "use": "Consumer zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "international_loans",
+      "dtype": "number",
+      "description": "International loans",
+      "use": "Global zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "real_estate_loans",
+      "dtype": "number",
+      "description": "Real-estate business loans",
+      "use": "Property risk",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "agriculture_loans",
+      "dtype": "number",
+      "description": "Agriculture loans",
+      "use": "Agri zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "manufacturing_loans",
+      "dtype": "number",
+      "description": "Manufacturing loans",
+      "use": "Factory zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "tourism_loans",
+      "dtype": "number",
+      "description": "Tourism loans",
+      "use": "Tourism zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "energy_loans",
+      "dtype": "number",
+      "description": "Energy loans",
+      "use": "Energy zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "transport_loans",
+      "dtype": "number",
+      "description": "Transport/logistics loans",
+      "use": "Infrastructure zone",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "construction_loans",
+      "dtype": "number",
+      "description": "Construction loans",
+      "use": "Property/infrastructure",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "commerce_loans",
+      "dtype": "number",
+      "description": "Commerce loans",
+      "use": "Retail economy",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "secured_retail_loans",
+      "dtype": "number",
+      "description": "Secured retail",
+      "use": "Risk mix",
+      "priority": "P0"
+    },
+    {
+      "group": "Loan portfolio",
+      "field": "unsecured_retail_loans",
+      "dtype": "number",
+      "description": "Unsecured retail",
+      "use": "Risk mix",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "interest_income",
+      "dtype": "number",
+      "description": "Total interest income",
+      "use": "Revenue flow",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "interest_expense",
+      "dtype": "number",
+      "description": "Interest expense",
+      "use": "Funding outflow",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "net_interest_income",
+      "dtype": "number",
+      "description": "NII",
+      "use": "Profit engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "nim",
+      "dtype": "percent",
+      "description": "Net interest margin",
+      "use": "NIM core",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "yield_on_loans",
+      "dtype": "percent",
+      "description": "Loan yield",
+      "use": "Interest engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "yield_on_earning_assets",
+      "dtype": "percent",
+      "description": "Earning asset yield",
+      "use": "Interest engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "loan_spread",
+      "dtype": "percent",
+      "description": "Loan yield minus cost of funds when reported",
+      "use": "Educational flow",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "nii_growth_qoq",
+      "dtype": "percent",
+      "description": "NII growth QoQ",
+      "use": "Trend",
+      "priority": "P0"
+    },
+    {
+      "group": "Interest income & NIM",
+      "field": "nii_growth_yoy",
+      "dtype": "percent",
+      "description": "NII growth YoY",
+      "use": "Trend",
+      "priority": "P0"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "net_fee_income",
+      "dtype": "number",
+      "description": "Net fee and service income",
+      "use": "Fee satellites",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "wealth_fee",
+      "dtype": "number",
+      "description": "Wealth-management fee",
+      "use": "Wealth node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "bancassurance_fee",
+      "dtype": "number",
+      "description": "Bancassurance fee",
+      "use": "Insurance node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "card_fee",
+      "dtype": "number",
+      "description": "Card-related fees",
+      "use": "Payments node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "transaction_fee",
+      "dtype": "number",
+      "description": "Transaction fees",
+      "use": "Payments node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "fx_income",
+      "dtype": "number",
+      "description": "FX income",
+      "use": "Markets node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "securities_brokerage_fee",
+      "dtype": "number",
+      "description": "Brokerage fee",
+      "use": "Capital-market node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "asset_management_fee",
+      "dtype": "number",
+      "description": "Asset-management fees",
+      "use": "AUM node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "investment_banking_fee",
+      "dtype": "number",
+      "description": "IB fee",
+      "use": "Capital-market node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "trading_income",
+      "dtype": "number",
+      "description": "Trading/FVTPL income",
+      "use": "Markets node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "investment_gain",
+      "dtype": "number",
+      "description": "Investment gain/loss",
+      "use": "Markets node",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "dividend_income",
+      "dtype": "number",
+      "description": "Dividend income",
+      "use": "Non-interest layer",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "other_operating_income",
+      "dtype": "number",
+      "description": "Other operating income",
+      "use": "Revenue layer",
+      "priority": "P1"
+    },
+    {
+      "group": "Fees & non-interest income",
+      "field": "non_interest_income",
+      "dtype": "number",
+      "description": "Total non-interest income",
+      "use": "Revenue layer",
+      "priority": "P1"
+    },
+    {
+      "group": "Costs & efficiency",
+      "field": "operating_expenses",
+      "dtype": "number",
+      "description": "Operating expenses",
+      "use": "Cost machine",
+      "priority": "P1"
+    },
+    {
+      "group": "Costs & efficiency",
+      "field": "staff_cost",
+      "dtype": "number",
+      "description": "Employee cost",
+      "use": "Efficiency",
+      "priority": "P1"
+    },
+    {
+      "group": "Costs & efficiency",
+      "field": "premises_cost",
+      "dtype": "number",
+      "description": "Branch/premises cost",
+      "use": "Efficiency",
+      "priority": "P1"
+    },
+    {
+      "group": "Costs & efficiency",
+      "field": "it_cost",
+      "dtype": "number",
+      "description": "Technology cost if disclosed",
+      "use": "Digital transformation",
+      "priority": "P1"
+    },
+    {
+      "group": "Costs & efficiency",
+      "field": "cost_to_income",
+      "dtype": "percent",
+      "description": "Cost/income ratio",
+      "use": "Efficiency layer",
+      "priority": "P1"
+    },
+    {
+      "group": "Costs & efficiency",
+      "field": "opex_growth_yoy",
+      "dtype": "percent",
+      "description": "Opex growth YoY",
+      "use": "Trend",
+      "priority": "P1"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "npl_amount",
+      "dtype": "number",
+      "description": "Stage 3/NPL amount",
+      "use": "NPL reservoir",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "npl_ratio",
+      "dtype": "percent",
+      "description": "NPL ratio",
+      "use": "Risk halo",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "stage1_loans",
+      "dtype": "number",
+      "description": "Performing loans",
+      "use": "Risk state",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "stage2_loans",
+      "dtype": "number",
+      "description": "Under-performing/SICR loans",
+      "use": "Early warning",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "stage2_ratio",
+      "dtype": "percent",
+      "description": "Stage 2/SICR ratio",
+      "use": "Early warning",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "stage3_loans",
+      "dtype": "number",
+      "description": "Stage 3 loans",
+      "use": "Risk state",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "new_npl_formation",
+      "dtype": "number",
+      "description": "New NPL formation",
+      "use": "Risk momentum",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "npl_formation_ratio",
+      "dtype": "percent",
+      "description": "NPL formation rate",
+      "use": "Risk momentum",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "restructured_loans",
+      "dtype": "number",
+      "description": "Restructured/problem loans",
+      "use": "Risk",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "ecl_expense",
+      "dtype": "number",
+      "description": "Expected credit loss expense",
+      "use": "Provision machine",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "credit_cost",
+      "dtype": "bps",
+      "description": "Credit cost",
+      "use": "Provision intensity",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "coverage_ratio",
+      "dtype": "percent",
+      "description": "NPL coverage",
+      "use": "Reserve shield",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "npa_foreclosed_assets",
+      "dtype": "number",
+      "description": "Foreclosed/NPA assets",
+      "use": "Recovery pipeline",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "writeoffs",
+      "dtype": "number",
+      "description": "Loan write-offs",
+      "use": "Credit loss",
+      "priority": "P0"
+    },
+    {
+      "group": "Asset quality & credit risk",
+      "field": "recoveries",
+      "dtype": "number",
+      "description": "Recoveries",
+      "use": "Credit-loss mitigation",
+      "priority": "P0"
+    },
+    {
+      "group": "Capital",
+      "field": "car_bis",
+      "dtype": "percent",
+      "description": "Total capital adequacy/BIS ratio",
+      "use": "Capital fortress",
+      "priority": "P0"
+    },
+    {
+      "group": "Capital",
+      "field": "cet1_ratio",
+      "dtype": "percent",
+      "description": "CET1 ratio",
+      "use": "Capital fortress",
+      "priority": "P0"
+    },
+    {
+      "group": "Capital",
+      "field": "tier1_ratio",
+      "dtype": "percent",
+      "description": "Tier 1 ratio",
+      "use": "Capital fortress",
+      "priority": "P0"
+    },
+    {
+      "group": "Capital",
+      "field": "tier2_ratio",
+      "dtype": "percent",
+      "description": "Tier 2 ratio",
+      "use": "Capital fortress",
+      "priority": "P0"
+    },
+    {
+      "group": "Capital",
+      "field": "regulatory_minimum",
+      "dtype": "percent",
+      "description": "Required capital ratio",
+      "use": "Safety threshold",
+      "priority": "P0"
+    },
+    {
+      "group": "Capital",
+      "field": "capital_surplus",
+      "dtype": "number",
+      "description": "Capital above internal/regulatory need",
+      "use": "Capital optionality",
+      "priority": "P0"
+    },
+    {
+      "group": "Capital",
+      "field": "integrated_risk_capital",
+      "dtype": "number",
+      "description": "Economic/integrated risk capital where disclosed",
+      "use": "Risk map",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "total_operating_income",
+      "dtype": "number",
+      "description": "Operating income",
+      "use": "Profit engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "pre_provision_operating_profit",
+      "dtype": "number",
+      "description": "PPOP",
+      "use": "Pre-credit profitability",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "profit_before_tax",
+      "dtype": "number",
+      "description": "PBT",
+      "use": "Profit waterfall",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "tax_expense",
+      "dtype": "number",
+      "description": "Income tax expense",
+      "use": "Profit waterfall",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "net_profit",
+      "dtype": "number",
+      "description": "Net profit attributable",
+      "use": "Profit core",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "eps",
+      "dtype": "number",
+      "description": "Earnings per share",
+      "use": "Per-share view",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "roa",
+      "dtype": "percent",
+      "description": "Return on assets",
+      "use": "Efficiency",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "roe",
+      "dtype": "percent",
+      "description": "Return on equity",
+      "use": "ROE engine",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "bvps",
+      "dtype": "number",
+      "description": "Book value per share",
+      "use": "Valuation",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "profit_growth_qoq",
+      "dtype": "percent",
+      "description": "Net profit QoQ",
+      "use": "Trend",
+      "priority": "P0"
+    },
+    {
+      "group": "Profitability",
+      "field": "profit_growth_yoy",
+      "dtype": "percent",
+      "description": "Net profit YoY",
+      "use": "Trend",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "share_price",
+      "dtype": "number",
+      "description": "Latest/reference share price",
+      "use": "Valuation galaxy",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "market_cap",
+      "dtype": "number",
+      "description": "Market capitalization",
+      "use": "Node size",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "pe",
+      "dtype": "multiple",
+      "description": "Price/earnings",
+      "use": "Valuation",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "pbv",
+      "dtype": "multiple",
+      "description": "Price/book value",
+      "use": "ROE-PBV map",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "dps",
+      "dtype": "number",
+      "description": "Dividend per share",
+      "use": "Dividend flow",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "dividend_yield",
+      "dtype": "percent",
+      "description": "Dividend yield",
+      "use": "Investor return",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "payout_ratio",
+      "dtype": "percent",
+      "description": "Dividend payout",
+      "use": "Capital return",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "buyback_authorized",
+      "dtype": "number",
+      "description": "Authorized buyback amount",
+      "use": "Capital return",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "buyback_executed",
+      "dtype": "number",
+      "description": "Executed buyback amount",
+      "use": "Capital return",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "treasury_shares",
+      "dtype": "number",
+      "description": "Treasury shares",
+      "use": "Capital return",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "free_float",
+      "dtype": "percent",
+      "description": "Free float",
+      "use": "Ownership",
+      "priority": "P0"
+    },
+    {
+      "group": "Valuation & shareholder return",
+      "field": "foreign_ownership",
+      "dtype": "percent",
+      "description": "Foreign ownership",
+      "use": "Ownership",
+      "priority": "P0"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "branches",
+      "dtype": "number",
+      "description": "Branch count",
+      "use": "Physical footprint",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "atms",
+      "dtype": "number",
+      "description": "ATM count",
+      "use": "Physical footprint",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "employees",
+      "dtype": "number",
+      "description": "Employee count",
+      "use": "Scale/efficiency",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "customers",
+      "dtype": "number",
+      "description": "Customer accounts/customers",
+      "use": "Franchise",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "digital_users",
+      "dtype": "number",
+      "description": "Digital active users",
+      "use": "Digital layer",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "digital_transaction_share",
+      "dtype": "percent",
+      "description": "Digital transaction share",
+      "use": "Digital layer",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "digital_lending",
+      "dtype": "number",
+      "description": "Digital-originated lending",
+      "use": "Digital layer",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "wealth_aum",
+      "dtype": "number",
+      "description": "Wealth/AUM",
+      "use": "Fee franchise",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "asset_management_aum",
+      "dtype": "number",
+      "description": "Asset-management AUM",
+      "use": "Fee franchise",
+      "priority": "P1"
+    },
+    {
+      "group": "Business franchise & digital",
+      "field": "subsidiary_revenue_mix",
+      "dtype": "json",
+      "description": "Revenue split by group company/business",
+      "use": "Group ecosystem",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "loan_growth_guidance",
+      "dtype": "range",
+      "description": "Management loan-growth target",
+      "use": "Actual vs guidance",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "nim_guidance",
+      "dtype": "range",
+      "description": "NIM target/guidance",
+      "use": "Actual vs guidance",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "credit_cost_guidance",
+      "dtype": "range",
+      "description": "Credit-cost target",
+      "use": "Actual vs guidance",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "cost_income_guidance",
+      "dtype": "range",
+      "description": "Cost/income target",
+      "use": "Actual vs guidance",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "npl_guidance",
+      "dtype": "range",
+      "description": "NPL target/ceiling",
+      "use": "Actual vs guidance",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "payout_guidance",
+      "dtype": "range",
+      "description": "Dividend payout policy",
+      "use": "Capital return",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "asset_yield_beta",
+      "dtype": "model input",
+      "description": "Change in asset yield vs policy rate",
+      "use": "Rate scenario",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "deposit_beta",
+      "dtype": "model input",
+      "description": "Change in deposit cost vs policy rate",
+      "use": "Rate scenario",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "loan_growth_beta",
+      "dtype": "model input",
+      "description": "Loan-growth response to macro/rate shock",
+      "use": "Scenario",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "credit_cost_beta",
+      "dtype": "model input",
+      "description": "Credit-cost response to macro shock",
+      "use": "Stress test",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "gdp_sensitivity",
+      "dtype": "model input",
+      "description": "Profit/credit response to GDP shock",
+      "use": "Macro scenario",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "property_stress_weight",
+      "dtype": "model input",
+      "description": "Property stress exposure weight",
+      "use": "Stress test",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "sme_stress_weight",
+      "dtype": "model input",
+      "description": "SME stress exposure weight",
+      "use": "Stress test",
+      "priority": "P1"
+    },
+    {
+      "group": "Guidance & scenario sensitivities",
+      "field": "consumer_stress_weight",
+      "dtype": "model input",
+      "description": "Consumer stress exposure weight",
+      "use": "Stress test",
+      "priority": "P1"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "document_id",
+      "dtype": "string",
+      "description": "Stable document id/hash",
+      "use": "Deduplication",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "document_type",
+      "dtype": "enum",
+      "description": "FS/MD&A/presentation/Pillar3/C.B.1.1/SET/BOT",
+      "use": "Retrieval filter",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "document_date",
+      "dtype": "date",
+      "description": "Document date",
+      "use": "Freshness",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "fiscal_year",
+      "dtype": "number",
+      "description": "Fiscal year",
+      "use": "Retrieval filter",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "quarter",
+      "dtype": "string",
+      "description": "Quarter/half/year",
+      "use": "Retrieval filter",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "page_number",
+      "dtype": "number",
+      "description": "Source page",
+      "use": "Citation",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "section_heading",
+      "dtype": "string",
+      "description": "Section/table heading",
+      "use": "Chunk context",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "chunk_id",
+      "dtype": "string",
+      "description": "Chunk identifier",
+      "use": "Vector lookup",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "chunk_text",
+      "dtype": "text",
+      "description": "Chunk text",
+      "use": "RAG corpus",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "table_id",
+      "dtype": "string",
+      "description": "Table identifier",
+      "use": "Structured extraction",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "checksum",
+      "dtype": "string",
+      "description": "Content checksum",
+      "use": "Versioning",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "language",
+      "dtype": "string",
+      "description": "TH/EN",
+      "use": "Retrieval",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "source_tier",
+      "dtype": "enum",
+      "description": "official/regulatory/market/secondary",
+      "use": "Confidence",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "confidence",
+      "dtype": "number",
+      "description": "Extraction confidence 0-1",
+      "use": "Human review",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "extraction_method",
+      "dtype": "enum",
+      "description": "table/parser/LLM/manual",
+      "use": "Auditability",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "conflict_flag",
+      "dtype": "boolean",
+      "description": "Cross-source discrepancy flag",
+      "use": "Validation",
+      "priority": "P0"
+    },
+    {
+      "group": "RAG metadata",
+      "field": "superseded_by",
+      "dtype": "string",
+      "description": "Newer document id",
+      "use": "Version chain",
+      "priority": "P0"
+    }
+  ],
+  "rag_pipeline": [
+    {
+      "step": 1,
+      "stage": "Ingest",
+      "instruction": "Collect PDF/PPTX/XLSX/HTML from local folder, Google Drive, bank IR, SET/SEC and BOT. Do not crawl private PC folders unless user explicitly uploads/mounts them.",
+      "output": "raw/{ticker}/{year}/{document_type}/"
+    },
+    {
+      "step": 2,
+      "stage": "Fingerprint",
+      "instruction": "Calculate SHA-256, canonical URL, document date, ticker, entity level and version. Deduplicate identical files.",
+      "output": "document_registry.jsonl"
+    },
+    {
+      "step": 3,
+      "stage": "Extract",
+      "instruction": "Extract text plus tables; preserve page, table title, unit and footnotes. Prefer native PDF/table parsing before OCR.",
+      "output": "processed/extracted/"
+    },
+    {
+      "step": 4,
+      "stage": "Normalize",
+      "instruction": "Normalize units to THB mn / percent-point / bps, but retain original value and unit. Never turn missing into zero.",
+      "output": "facts_normalized"
+    },
+    {
+      "step": 5,
+      "stage": "Chunk",
+      "instruction": "Chunk by semantic headings/table blocks (~800-1,500 tokens; 100-150 overlap only for narrative). Tables should remain intact where possible.",
+      "output": "processed/chunks.jsonl"
+    },
+    {
+      "step": 6,
+      "stage": "Tag metadata",
+      "instruction": "ticker, entity_level, year, quarter, document_type, page, section, source_url, published_at, audit_status, language, source_tier.",
+      "output": "chunk metadata"
+    },
+    {
+      "step": 7,
+      "stage": "Structured extraction",
+      "instruction": "Extract financial metrics to a deterministic facts table with value, unit, period, source/page, status and confidence.",
+      "output": "facts/bank_metrics.parquet or SQL"
+    },
+    {
+      "step": 8,
+      "stage": "Validate",
+      "instruction": "Run equation checks, unit checks, period/entity checks, QoQ/YoY consistency checks and cross-source conflict detection.",
+      "output": "validation_report"
+    },
+    {
+      "step": 9,
+      "stage": "Index",
+      "instruction": "Embed narrative chunks into vector index; keep structured facts in SQL/JSON. Do NOT rely on vector RAG for numeric lookup.",
+      "output": "index/vector + facts/db"
+    },
+    {
+      "step": 10,
+      "stage": "Retrieve",
+      "instruction": "For numeric questions: facts/SQL first. For explanation/thesis: vector retrieval second. Always filter ticker+period+entity level.",
+      "output": "retrieval router"
+    },
+    {
+      "step": 11,
+      "stage": "Answer",
+      "instruction": "Return FACT / INTERPRETATION / SCENARIO separately, with page-level provenance for facts.",
+      "output": "response"
+    },
+    {
+      "step": 12,
+      "stage": "Human review",
+      "instruction": "Flag conflicts, low confidence, stale mix, and company-vs-group mismatches before publishing.",
+      "output": "approval queue"
+    },
+    {
+      "step": 13,
+      "stage": "Refresh",
+      "instruction": "Market/macro: daily-monthly as appropriate; C.B.1.1 monthly; financials/MD&A/presentations quarterly; Pillar 3/annual reports annually.",
+      "output": "scheduler"
+    }
+  ],
+  "rag_document_checklist": [
+    {
+      "ticker": "KBANK",
+      "document": "Quarterly reviewed/audited financial statements",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KBANK",
+      "document": "Management Discussion & Analysis (MD&A)",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KBANK",
+      "document": "Analyst / Investor Presentation",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KBANK",
+      "document": "C.B.1.1 Summary Statement of Assets & Liabilities",
+      "cadence": "Monthly",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KBANK",
+      "document": "Basel III Pillar 3 / capital disclosure",
+      "cadence": "Semiannual/Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KBANK",
+      "document": "Annual Report / Form 56-1 One Report",
+      "cadence": "Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KBANK",
+      "document": "Dividend / buyback / capital-return notices",
+      "cadence": "Event-driven",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KBANK",
+      "document": "SET Factsheet / market snapshot",
+      "cadence": "Daily/reference",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SCB",
+      "document": "Quarterly reviewed/audited financial statements",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SCB",
+      "document": "Management Discussion & Analysis (MD&A)",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SCB",
+      "document": "Analyst / Investor Presentation",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SCB",
+      "document": "C.B.1.1 Summary Statement of Assets & Liabilities",
+      "cadence": "Monthly",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SCB",
+      "document": "Basel III Pillar 3 / capital disclosure",
+      "cadence": "Semiannual/Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SCB",
+      "document": "Annual Report / Form 56-1 One Report",
+      "cadence": "Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SCB",
+      "document": "Dividend / buyback / capital-return notices",
+      "cadence": "Event-driven",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SCB",
+      "document": "SET Factsheet / market snapshot",
+      "cadence": "Daily/reference",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KTB",
+      "document": "Quarterly reviewed/audited financial statements",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KTB",
+      "document": "Management Discussion & Analysis (MD&A)",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KTB",
+      "document": "Analyst / Investor Presentation",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KTB",
+      "document": "C.B.1.1 Summary Statement of Assets & Liabilities",
+      "cadence": "Monthly",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KTB",
+      "document": "Basel III Pillar 3 / capital disclosure",
+      "cadence": "Semiannual/Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KTB",
+      "document": "Annual Report / Form 56-1 One Report",
+      "cadence": "Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KTB",
+      "document": "Dividend / buyback / capital-return notices",
+      "cadence": "Event-driven",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KTB",
+      "document": "SET Factsheet / market snapshot",
+      "cadence": "Daily/reference",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "BBL",
+      "document": "Quarterly reviewed/audited financial statements",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "BBL",
+      "document": "Management Discussion & Analysis (MD&A)",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "BBL",
+      "document": "Analyst / Investor Presentation",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "BBL",
+      "document": "C.B.1.1 Summary Statement of Assets & Liabilities",
+      "cadence": "Monthly",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "BBL",
+      "document": "Basel III Pillar 3 / capital disclosure",
+      "cadence": "Semiannual/Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "BBL",
+      "document": "Annual Report / Form 56-1 One Report",
+      "cadence": "Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "BBL",
+      "document": "Dividend / buyback / capital-return notices",
+      "cadence": "Event-driven",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "BBL",
+      "document": "SET Factsheet / market snapshot",
+      "cadence": "Daily/reference",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TTB",
+      "document": "Quarterly reviewed/audited financial statements",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TTB",
+      "document": "Management Discussion & Analysis (MD&A)",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TTB",
+      "document": "Analyst / Investor Presentation",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TTB",
+      "document": "C.B.1.1 Summary Statement of Assets & Liabilities",
+      "cadence": "Monthly",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TTB",
+      "document": "Basel III Pillar 3 / capital disclosure",
+      "cadence": "Semiannual/Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TTB",
+      "document": "Annual Report / Form 56-1 One Report",
+      "cadence": "Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TTB",
+      "document": "Dividend / buyback / capital-return notices",
+      "cadence": "Event-driven",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TTB",
+      "document": "SET Factsheet / market snapshot",
+      "cadence": "Daily/reference",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KKP",
+      "document": "Quarterly reviewed/audited financial statements",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KKP",
+      "document": "Management Discussion & Analysis (MD&A)",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KKP",
+      "document": "Analyst / Investor Presentation",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KKP",
+      "document": "C.B.1.1 Summary Statement of Assets & Liabilities",
+      "cadence": "Monthly",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KKP",
+      "document": "Basel III Pillar 3 / capital disclosure",
+      "cadence": "Semiannual/Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KKP",
+      "document": "Annual Report / Form 56-1 One Report",
+      "cadence": "Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KKP",
+      "document": "Dividend / buyback / capital-return notices",
+      "cadence": "Event-driven",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "KKP",
+      "document": "SET Factsheet / market snapshot",
+      "cadence": "Daily/reference",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TISCO",
+      "document": "Quarterly reviewed/audited financial statements",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TISCO",
+      "document": "Management Discussion & Analysis (MD&A)",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TISCO",
+      "document": "Analyst / Investor Presentation",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TISCO",
+      "document": "C.B.1.1 Summary Statement of Assets & Liabilities",
+      "cadence": "Monthly",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TISCO",
+      "document": "Basel III Pillar 3 / capital disclosure",
+      "cadence": "Semiannual/Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TISCO",
+      "document": "Annual Report / Form 56-1 One Report",
+      "cadence": "Annual",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TISCO",
+      "document": "Dividend / buyback / capital-return notices",
+      "cadence": "Event-driven",
+      "priority": "P1",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "TISCO",
+      "document": "SET Factsheet / market snapshot",
+      "cadence": "Daily/reference",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SYSTEM",
+      "document": "BOT MPC decisions",
+      "cadence": "Per meeting",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SYSTEM",
+      "document": "BOT Banking Sector Quarterly Brief",
+      "cadence": "Quarterly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SYSTEM",
+      "document": "BOT Economic Outlook",
+      "cadence": "Quarterly/update",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    },
+    {
+      "ticker": "SYSTEM",
+      "document": "BOT current Thai Economy indicators",
+      "cadence": "Monthly",
+      "priority": "P0",
+      "status": "RECOMMENDED"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-KBANK-Q2-FS",
+      "entity": "KBANK",
+      "title": "KASIKORNBANK 2Q26 Unaudited Financial Information",
+      "source_type": "Financial statement / financial highlights",
+      "period": "2Q/1H 2026",
+      "published": "2026-07-21",
+      "tier": "Primary",
+      "url": "https://www.kasikornbank.com/en/IR/FinanInfoReports/financialReports/2Q26_KBank_unaudited-E.pdf",
+      "notes": "Official KBank IR PDF; consolidated figures unless noted."
+    },
+    {
+      "id": "SRC-KBANK-Q2-PRES",
+      "entity": "KBANK",
+      "title": "KBank Presentation for Analyst Meeting 2Q26",
+      "source_type": "Investor presentation",
+      "period": "2Q/1H 2026",
+      "published": "2026-07-21",
+      "tier": "Primary",
+      "url": "https://www.kasikornbank.com/en/IR/PresentationJournal/webcast/KBank_Presentation_for_Analyst_Meeting_2Q26.pdf",
+      "notes": "Official IR presentation; NIM/funding metrics and loan portfolio information."
+    },
+    {
+      "id": "SRC-KBANK-IR",
+      "entity": "KBANK",
+      "title": "KBank Investor Relations",
+      "source_type": "IR hub",
+      "period": "Current",
+      "published": "",
+      "tier": "Primary",
+      "url": "https://www.kasikornbank.com/en/IR/",
+      "notes": "Lists latest Q2/2026 reports and July 2026 C.B.1.1; accessed 2026-09-09."
+    },
+    {
+      "id": "SRC-SCBX-Q2-PR",
+      "entity": "SCB",
+      "title": "SCBX Reports 2Q26 Net Profit of THB 11,117 Million",
+      "source_type": "Press release",
+      "period": "2Q 2026",
+      "published": "2026-07-21",
+      "tier": "Primary",
+      "url": "https://investor.scbx.com/en/newsroom/press-releases/202896/scbx-reports-2q26-net-profit-of-thb-11117-million-up-9-qoq",
+      "notes": "Official SCBX investor relations release."
+    },
+    {
+      "id": "SRC-SCBX-HIGHLIGHTS",
+      "entity": "SCB",
+      "title": "SCBX Financial Highlights",
+      "source_type": "IR financial highlights",
+      "period": "2Q 2026",
+      "published": "",
+      "tier": "Primary",
+      "url": "https://investor.scbx.com/en/financial-results/financial-highlights",
+      "notes": "Official SCBX highlights; loan portfolio by company, CAR/CET1, quarterly revenue/profit."
+    },
+    {
+      "id": "SRC-SCBX-QRESULTS",
+      "entity": "SCB",
+      "title": "SCBX Quarterly Results",
+      "source_type": "IR document hub",
+      "period": "2Q 2026",
+      "published": "",
+      "tier": "Primary",
+      "url": "https://investor.scbx.com/en/document/quarterly-results",
+      "notes": "Reviewed Q2/2026 financial statements and MD&A listed."
+    },
+    {
+      "id": "SRC-KTB-Q2-MDA",
+      "entity": "KTB",
+      "title": "Krung Thai Bank 2Q26 MD&A",
+      "source_type": "Management discussion and analysis",
+      "period": "2Q/1H 2026",
+      "published": "2026-07-21",
+      "tier": "Primary/SET filing",
+      "url": "https://weblink.set.or.th/dat/news/202607/0150NWS210720261923358200E.pdf",
+      "notes": "SET-hosted official KTB filing; consolidated metrics and loan mix."
+    },
+    {
+      "id": "SRC-BBL-FININFO",
+      "entity": "BBL",
+      "title": "Bangkok Bank Financial Information",
+      "source_type": "IR financial highlights",
+      "period": "1H 2026",
+      "published": "",
+      "tier": "Primary",
+      "url": "https://www.bangkokbank.com/en/Investor-Relations/Financial-Information",
+      "notes": "Official BBL IR page; 1H26 key financial data."
+    },
+    {
+      "id": "SRC-BBL-Q2-PR",
+      "entity": "BBL",
+      "title": "Bangkok Bank 1H26 Results News",
+      "source_type": "Press release",
+      "period": "1H 2026",
+      "published": "2026-07-21",
+      "tier": "Primary",
+      "url": "https://www.bangkokbank.com/en/About-Us/News-and-Media/News-Detail?ID=C18185AD-A831-402F-B007-9E8F1692051A&Tag=New",
+      "notes": "Official Bangkok Bank news release."
+    },
+    {
+      "id": "SRC-TTB-Q2",
+      "entity": "TTB",
+      "title": "ttb announced 2Q26 and 1H26 financial performance",
+      "source_type": "Investor news",
+      "period": "2Q/1H 2026",
+      "published": "2026-07-20",
+      "tier": "Primary",
+      "url": "https://www.ttbbank.com/en/ir/set-and-investor-news/investor-news/ttb-announced-2q26-and-1h26-financial-performance",
+      "notes": "Official ttb IR release."
+    },
+    {
+      "id": "SRC-KKP-IR",
+      "entity": "KKP",
+      "title": "KKP Investor Relations Home",
+      "source_type": "IR hub",
+      "period": "2Q 2026",
+      "published": "",
+      "tier": "Primary",
+      "url": "https://ir.kkpfg.com/en/home/",
+      "notes": "Official KKP IR; Q2 2026 audited statements, MD&A, and presentation available."
+    },
+    {
+      "id": "SRC-KKP-PRES",
+      "entity": "KKP",
+      "title": "KKP's Q2 2026 Results Presentation",
+      "source_type": "Investor presentation hub",
+      "period": "2Q/1H 2026",
+      "published": "2026-07-21",
+      "tier": "Primary",
+      "url": "https://ir.kkpfg.com/th/downloads/webcasts-presentations",
+      "notes": "Official KKP IR presentation listing; direct PDF host may block automated fetch."
+    },
+    {
+      "id": "SRC-KKP-SEC",
+      "entity": "KKP",
+      "title": "SEC Publication Document - KKP",
+      "source_type": "Regulatory filing register",
+      "period": "2Q 2026",
+      "published": "2026-08-27",
+      "tier": "Regulatory",
+      "url": "https://market.sec.or.th/public/idisc/en/FinancialReport/FS-0000000034",
+      "notes": "SEC page lists 2026 Q2 consolidated/company financial statements and 1H26 MD&A."
+    },
+    {
+      "id": "SRC-TISCO-Q2-MDA",
+      "entity": "TISCO",
+      "title": "TISCO Financial Group 2Q26 MD&A",
+      "source_type": "Management discussion and analysis",
+      "period": "2Q/1H 2026",
+      "published": "2026-07-14",
+      "tier": "Primary",
+      "url": "https://www.tisco.co.th/wp-content/uploads/MDA-2Q26E.pdf",
+      "notes": "Official TISCO unreviewed MD&A; reviewed Q2 filing was subsequently listed by TISCO IR."
+    },
+    {
+      "id": "SRC-TISCO-PRES",
+      "entity": "TISCO",
+      "title": "TISCO Investor Relations Presentations",
+      "source_type": "IR presentation hub",
+      "period": "2Q 2026",
+      "published": "",
+      "tier": "Primary",
+      "url": "https://www.tisco.co.th/en/investorrelations/financial-summary/presentation",
+      "notes": "Official TISCO IR presentation page."
+    },
+    {
+      "id": "SRC-BOT-MPC",
+      "entity": "SYSTEM",
+      "title": "MPC Decision 4/2026",
+      "source_type": "Monetary policy",
+      "period": "2026-08-26",
+      "published": "2026-08-26",
+      "tier": "Official",
+      "url": "https://www.bot.or.th/en/news-and-media/news/mpc/news-20260826-KsecaE98.html",
+      "notes": "BOT maintained policy rate at 1.00%."
+    },
+    {
+      "id": "SRC-BOT-Q2SYS",
+      "entity": "SYSTEM",
+      "title": "Banking Sector Quarterly Brief Q2 2026",
+      "source_type": "Banking system statistics",
+      "period": "2Q 2026",
+      "published": "2026-08-18",
+      "tier": "Official",
+      "url": "https://www.bot.or.th/en/news-and-media/news/news-20260818.html",
+      "notes": "BOT system loan growth, NPL and Stage 2 statistics."
+    },
+    {
+      "id": "SRC-BOT-OUTLOOK",
+      "entity": "SYSTEM",
+      "title": "BOT Economic Outlook",
+      "source_type": "Macro forecast",
+      "period": "2026 outlook",
+      "published": "2026-06-24",
+      "tier": "Official",
+      "url": "https://www.bot.or.th/en/thai-economy/economic-outlook.html",
+      "notes": "BOT outlook as of 24 Jun 2026."
+    },
+    {
+      "id": "SRC-BOT-ECON",
+      "entity": "SYSTEM",
+      "title": "BOT Thai Economy Current Statistics",
+      "source_type": "Macro current indicators",
+      "period": "Jul-Aug 2026",
+      "published": "",
+      "tier": "Official",
+      "url": "https://www.bot.or.th/en/thai-economy.html",
+      "notes": "Current macro dashboard; values have different reference months."
+    },
+    {
+      "id": "SRC-SET-KBANK",
+      "entity": "KBANK",
+      "title": "SET KBANK Factsheet",
+      "source_type": "Market factsheet",
+      "period": "2026-09-07/08",
+      "published": "",
+      "tier": "Market operator",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/kbank/factsheet",
+      "notes": "SET factsheet snapshot; market values captured from latest search results before market open 2026-09-09. Exact as-of date stored per row."
+    },
+    {
+      "id": "SRC-SET-SCB",
+      "entity": "SCB",
+      "title": "SET SCB Factsheet",
+      "source_type": "Market factsheet",
+      "period": "2026-09-07/08",
+      "published": "",
+      "tier": "Market operator",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/scb/factsheet",
+      "notes": "SET factsheet snapshot; market values captured from latest search results before market open 2026-09-09. Exact as-of date stored per row."
+    },
+    {
+      "id": "SRC-SET-KTB",
+      "entity": "KTB",
+      "title": "SET KTB Factsheet",
+      "source_type": "Market factsheet",
+      "period": "2026-09-07/08",
+      "published": "",
+      "tier": "Market operator",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/ktb/factsheet",
+      "notes": "SET factsheet snapshot; market values captured from latest search results before market open 2026-09-09. Exact as-of date stored per row."
+    },
+    {
+      "id": "SRC-SET-BBL",
+      "entity": "BBL",
+      "title": "SET BBL Factsheet",
+      "source_type": "Market factsheet",
+      "period": "2026-09-07/08",
+      "published": "",
+      "tier": "Market operator",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/bbl/factsheet",
+      "notes": "SET factsheet snapshot; market values captured from latest search results before market open 2026-09-09. Exact as-of date stored per row."
+    },
+    {
+      "id": "SRC-SET-TTB",
+      "entity": "TTB",
+      "title": "SET TTB Factsheet",
+      "source_type": "Market factsheet",
+      "period": "2026-09-07/08",
+      "published": "",
+      "tier": "Market operator",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/ttb/factsheet",
+      "notes": "SET factsheet snapshot; market values captured from latest search results before market open 2026-09-09. Exact as-of date stored per row."
+    },
+    {
+      "id": "SRC-SET-KKP",
+      "entity": "KKP",
+      "title": "SET KKP Factsheet",
+      "source_type": "Market factsheet",
+      "period": "2026-09-07/08",
+      "published": "",
+      "tier": "Market operator",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/kkp/factsheet",
+      "notes": "SET factsheet snapshot; market values captured from latest search results before market open 2026-09-09. Exact as-of date stored per row."
+    },
+    {
+      "id": "SRC-SET-TISCO",
+      "entity": "TISCO",
+      "title": "SET TISCO Factsheet",
+      "source_type": "Market factsheet",
+      "period": "2026-09-07/08",
+      "published": "",
+      "tier": "Market operator",
+      "url": "https://www.set.or.th/en/market/product/stock/quote/tisco/factsheet",
+      "notes": "SET factsheet snapshot; market values captured from latest search results before market open 2026-09-09. Exact as-of date stored per row."
+    }
+  ],
+  "asset_quality": [
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "scope": "Consolidated loans",
+      "stage": "Stage 1 / Performing",
+      "amount_mn": 2541035,
+      "npl_amount_mn": null,
+      "npl_ratio_pct": null,
+      "coverage_pct": null,
+      "credit_cost_bps": null,
+      "source": "SRC-KTB-Q2-MDA"
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "scope": "Consolidated loans",
+      "stage": "Stage 2 / Under-performing",
+      "amount_mn": 197068,
+      "npl_amount_mn": null,
+      "npl_ratio_pct": null,
+      "coverage_pct": null,
+      "credit_cost_bps": null,
+      "source": "SRC-KTB-Q2-MDA"
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "scope": "Consolidated loans",
+      "stage": "Stage 3 / NPL",
+      "amount_mn": 93344,
+      "npl_amount_mn": 93706,
+      "npl_ratio_pct": 2.92,
+      "coverage_pct": 205.2,
+      "credit_cost_bps": 95,
+      "source": "SRC-KTB-Q2-MDA"
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "scope": "Group loans",
+      "stage": "Stage 1 / Performing",
+      "amount_mn": 214098.36,
+      "source": "SRC-TISCO-Q2-MDA"
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "scope": "Group loans",
+      "stage": "Stage 2 / Under-performing",
+      "amount_mn": 16710.87,
+      "calculated_ratio_pct": 7.08679940075346,
+      "source": "SRC-TISCO-Q2-MDA"
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "scope": "Group loans",
+      "stage": "Stage 3 / NPL",
+      "amount_mn": 4993.55,
+      "npl_ratio_pct": 2.12,
+      "allowance_mn": 9495.74,
+      "coverage_pct": 190.2,
+      "credit_cost_bps": 90,
+      "source": "SRC-TISCO-Q2-MDA"
+    }
+  ],
+  "funding_mix": [
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "current_mn": 1830.0,
+      "savings_mn": 32164.79,
+      "fixed_mn": 63688.85,
+      "negotiable_cd_mn": 117098.88,
+      "total_deposits_mn": 214801.29,
+      "source": "SRC-TISCO-Q2-MDA"
+    },
+    {
+      "ticker": "KKP",
+      "period": "2026-06-30",
+      "current_mn": 1311,
+      "savings_mn": 189757,
+      "term_mn": 165527,
+      "total_deposits_mn": 356617,
+      "casa_pct_reported": 53.6,
+      "source": "SRC-KKP-PRES"
+    },
+    {
+      "ticker": "KBANK",
+      "period": "2026-06-30",
+      "casa_pct_reported": 83.0,
+      "source": "SRC-KBANK-Q2-PRES"
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "casa_pct_reported": 80.0,
+      "source": "SRC-KTB-Q2-MDA"
+    }
+  ],
+  "capital_entity": [
+    {
+      "ticker": "KBANK",
+      "period": "2026-06-30",
+      "scope": "Financial conglomerate",
+      "car_pct": 19.24,
+      "tier1_pct": 17.35,
+      "source": "SRC-KBANK-Q2-FS"
+    },
+    {
+      "ticker": "SCB",
+      "period": "2026-06-30",
+      "scope": "SCBX group",
+      "car_pct": 18.6,
+      "cet1_pct": 17.4,
+      "source": "SRC-SCBX-HIGHLIGHTS"
+    },
+    {
+      "ticker": "KTB",
+      "period": "2026-06-30",
+      "scope": "Financial business group",
+      "car_pct": 20.7,
+      "cet1_pct": 18.7,
+      "source": "SRC-KTB-Q2-MDA"
+    },
+    {
+      "ticker": "BBL",
+      "period": "2026-06-30",
+      "scope": "Consolidated bank",
+      "car_pct": 21.4,
+      "cet1_pct": 16.9,
+      "tier1_pct": 16.9,
+      "source": "SRC-BBL-FININFO"
+    },
+    {
+      "ticker": "TTB",
+      "period": "2026-06-30",
+      "scope": "Bank and subsidiaries",
+      "car_pct": 19.0,
+      "tier1_pct": 17.0,
+      "source": "SRC-TTB-Q2"
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "scope": "TISCO Financial Group",
+      "car_pct": 19.3,
+      "tier1_pct": 17.0,
+      "tier2_pct": 2.3,
+      "status": "projected_reported",
+      "source": "SRC-TISCO-Q2-MDA"
+    },
+    {
+      "ticker": "TISCO",
+      "period": "2026-06-30",
+      "scope": "TISCO Bank",
+      "car_pct": 20.6,
+      "tier1_pct": 18.2,
+      "tier2_pct": 2.5,
+      "status": "projected_reported",
+      "source": "SRC-TISCO-Q2-MDA"
+    }
+  ]
+}

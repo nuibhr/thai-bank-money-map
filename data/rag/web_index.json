@@ -1,0 +1,1199 @@
+{
+  "meta": {
+    "chunk_count": 91,
+    "corpus_file_count": 0,
+    "errors": []
+  },
+  "chunks": [
+    {
+      "id": "99a0042c79edca835d23",
+      "text": "Ticker: KBANK\nEntity: KASIKORNBANK PCL\nPeriod end: 2026-06-30\nentity_level: Consolidated bank / financial conglomerate where stated\nfin_period_end: 2026-06-30\nreport_status: Official unaudited Q2 + analyst presentation\nassets: 4570971\nloans: 2558943\ndeposits: 2918027\nequity_attrib: 576284\nq2_profit: 13247\nh1_profit: 27915\nq2_nii: 31432\nh1_nii: 63390\nq2_noninterest: 18291\nq2_netfees: 10391\nq2_opex: 20750\nq2_ecl: 10019\nnim_q2: 2.9\nnim_h1: 2.91\nroa_q2: 1.16\nroe_q2: 9.11\nroe_h1: 9.65\ncost_income: 41.73\nnpl_pct: 3.18\nstage2_pct: 7.45\ncredit_cost_q2: 160\ncredit_cost_h1: 158\ncoverage: 173.9\ncar: 19.24\ntier1: 17.35\nldr: 87.69\ncasa: 83.0\nloan_growth_ytd: 3.32\ndeposit_growth_ytd: 2.37\nyield_loans: 4.68\nearning_asset_yield: 3.7\ncost_fund: 1.07\ncost_deposit: 0.94\nnotes: Stage2-like field uses Significant Increase in Credit Risk loans ratio 7.45%; financial-conglomerate capital ratios. Loan portfolio mix in Loan_Mix uses the 1Q26 business definition because the 2Q analyst slide retained that composition table while balance-sheet loans are 30 Jun 2026.",
+      "metadata": {
+        "ticker": "KBANK",
+        "doc_type": "structured_bank_snapshot",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KBANK-Q2-FS",
+          "SRC-KBANK-Q2-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "be71076cc0db0c328c6c",
+      "text": "Ticker: SCB\nEntity: SCB X PCL\nPeriod end: 2026-06-30\nentity_level: Holding company / group; loan and capital data at group portfolio level\nfin_period_end: 2026-06-30\nreport_status: Official reviewed Q2 available; IR highlights/press release used\nloans: 2405000\nq2_profit: 11117\nq2_nii: 27306\nq2_opex: 17042\ncost_income: 41.3\nnpl_pct: 3.17\ncoverage: 158.6\ncar: 18.6\ncet1: 17.4\nnotes: SCB ticker represents SCBX holding company. 2Q loan portfolio is split by company (SCB Bank, CardX, AutoX, MONIX, ABACUS digital, others), not by economic sector. Non-interest figure here is constructed as fee & other income plus investment/trading income for visual revenue-layer use, not a standardized accounting subtotal.",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_bank_snapshot",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SCBX-Q2-PR",
+          "SRC-SCBX-HIGHLIGHTS",
+          "SRC-SCBX-QRESULTS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "07246ff4787ff6c653b0",
+      "text": "Ticker: KTB\nEntity: KRUNG THAI BANK PCL\nPeriod end: 2026-06-30\nentity_level: Consolidated bank / financial group capital where stated\nfin_period_end: 2026-06-30\nreport_status: Official Q2 MD&A / SET filing\nassets: 3875705\nloans: 2809145\ndeposits: 2856976\nequity_attrib: 452907\nq2_profit: 12125\nh1_profit: 24562\nq2_nii: 23261\nh1_nii: 46699\nq2_noninterest: 14219\nq2_netfees: 6144\nq2_opex: 14582\nq2_ecl: 6620\nnim_q2: 2.45\nnim_h1: 2.47\nroa_q2: 1.25\nroe_q2: 10.54\nroe_h1: 10.8\ncost_income: 38.9\nnpl_pct: 2.92\nnpl_mn: 93706\ncredit_cost_q2: 95\ncredit_cost_h1: 105\ncoverage: 205.2\ncar: 20.7\ncet1: 18.7\nldr: 98.32\ncasa: 80.0\nloan_growth_ytd: 3.6\ndeposit_growth_ytd: -0.3\nearning_asset_yield: 3.36\ncost_fund: 1.07\nnotes: Loans column is gross loans before deferred revenue; equity attributable to bank shareholders. CET1 is financial business group CET1. Loan mix in Loan_Mix is 30 Jun 2026 and highly detailed.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_bank_snapshot",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "1ada9bc0a4a5fd3ceb88",
+      "text": "Ticker: BBL\nEntity: BANGKOK BANK PCL\nPeriod end: 2026-06-30\nentity_level: Consolidated bank\nfin_period_end: 2026-06-30\nreport_status: Official 1H26 financial highlights\nassets: 4681447\nloans: 2678467\ndeposits: 3212308\nh1_profit: 20492\nh1_nii: 55744\nnim_h1: 2.46\nroe_h1: 7.16\ncost_income: 47.1\nnpl_pct: 3.3\nnpl_mn: 105261\ncoverage: 306.3\ncar: 21.4\ntier1: 16.9\ncet1: 16.9\nldr: 83.4\nloan_growth_ytd: 2.7\ndeposit_growth_ytd: 0.5\nnotes: BBL source page discloses 1H rather than all Q2 ratios. Loan growth driven by large corporate and international portfolios per official release. Leave Q2-only cells blank until detailed MD&A ingestion.",
+      "metadata": {
+        "ticker": "BBL",
+        "doc_type": "structured_bank_snapshot",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BBL-FININFO",
+          "SRC-BBL-Q2-PR"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "4745ca1e307890d9f668",
+      "text": "Ticker: TTB\nEntity: TMBTHANACHART BANK PCL\nPeriod end: 2026-06-30\nentity_level: Bank and subsidiaries\nfin_period_end: 2026-06-30\nreport_status: Official 2Q/1H26 investor release\nloans: 1184000\ndeposits: 1274000\nq2_profit: 5513\nh1_profit: 10683\nq2_opex: 8051\nq2_ecl: 4040\ncost_income: 46.0\nnpl_pct: 2.93\nnpl_mn: 39000\ncredit_cost_h1: 136\ncoverage: 157.0\ncar: 19.0\ntier1: 17.0\nloan_growth_ytd: -1.8\ndeposit_growth_ytd: 0.4\nnotes: Press release does not provide full NIM/ROE set; intentionally blank rather than using secondary analyst numbers. Buyback program can be stored separately as capital-return metadata.",
+      "metadata": {
+        "ticker": "TTB",
+        "doc_type": "structured_bank_snapshot",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TTB-Q2"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "385eb5e1870d80ec5f7c",
+      "text": "Ticker: KKP\nEntity: KIATNAKIN PHATRA BANK PCL\nPeriod end: 2026-06-30\nentity_level: Consolidated bank and capital-markets subsidiaries\nfin_period_end: 2026-06-30\nreport_status: Official Q2 IR/SEC source set\nassets: 528700.406\nloans: 354075\ndeposits: 356617\nequity_attrib: 69013.79\nq2_profit: 2122.087\nh1_profit: 4078\nq2_nii: 4329\nq2_noninterest: 2558\nq2_opex: 3200\nq2_ecl: 970\nroa_q2: 1.6\nroe_q2: 12.4\nroe_h1: 12.2\ncost_income: 42.9\nnpl_pct: 3.5\nnpl_mn: 12309\ncredit_cost_q2: 143\ncredit_cost_h1: 146\ncoverage: 150.7\nldr: 91.2\ncasa: 53.6\nloan_growth_ytd: 3.1\nyield_loans: 6.2\ncost_fund: 1.7\nnotes: Gross/customer-loan definitions vary by source; Loan_Mix uses KKP Q2 management presentation categories and amounts. SEC lists Q2 2026 consolidated statements; IR presentation is the preferred source for operating ratios.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_bank_snapshot",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES",
+          "SRC-KKP-SEC",
+          "SRC-KKP-IR"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "461ce6e791407163314e",
+      "text": "Ticker: TISCO\nEntity: TISCO FINANCIAL GROUP PCL\nPeriod end: 2026-06-30\nentity_level: Financial holding group; capital ratios separately disclose Group and TISCO Bank\nfin_period_end: 2026-06-30\nreport_status: Official 2Q26 MD&A; values from unreviewed MD&A, reviewed filing later listed\nassets: 290027.11\nloans: 235802.78\ndeposits: 214801.29\nequity_attrib: 42473.69\nq2_profit: 1763.85\nh1_profit: 3497.47\nq2_nii: 3523.53\nh1_nii: 6966.64\nq2_noninterest: 1558.15\nq2_netfees: 1383.63\nq2_opex: 2341.65\nq2_ecl: 550.91\nnim_q2: 4.98\nroe_q2: 16.1\nroe_h1: 16.3\ncost_income: 46.1\nnpl_pct: 2.12\nnpl_mn: 4993.55\ncredit_cost_q2: 90\ncredit_cost_h1: 110\ncoverage: 190.2\ncar: 19.3\ntier1: 17.0\nloan_growth_ytd: 0.0\ndeposit_growth_ytd: 1.6\nyield_loans: 7.34\ncost_fund: 1.58\nnotes: TISCO cost/income 46.1% directly reported. Stage 2 amount and calculated ratio are stored in asset_quality; L/D is calculated from loans/deposits in funding_mix rather than hard-coded. Group projected BIS/Tier1 19.3%/17.0%; TISCO Bank 20.6%/18.2%.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_bank_snapshot",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA",
+          "SRC-TISCO-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "a3e0c6900ca8cce04ee0",
+      "text": "Section: market\nticker: KBANK\nas_of: 2026-09-08\nprice: 248.0\nmarket_cap: 587593.24\npe: 11.39\npbv: 1.01\nsource: SRC-SET-KBANK\nnote: SET factsheet body captured as of 8 Sep; search-result header showed an inconsistent title price, so body fields were used.",
+      "metadata": {
+        "ticker": "KBANK",
+        "doc_type": "structured_market",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SET-KBANK"
+        ],
+        "period": "2026-09-08"
+      }
+    },
+    {
+      "id": "9a15b3cb53c608ac8973",
+      "text": "Section: market\nticker: SCB\nas_of: 2026-09-07\nprice: 152.0\nmarket_cap: 511800.31\npe: 11.76\npbv: 1.06\nsource: SRC-SET-SCB\nnote: Latest complete SET factsheet snapshot retrieved in research; not forced to 8 Sep where complete fields were unavailable.",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_market",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SET-SCB"
+        ],
+        "period": "2026-09-07"
+      }
+    },
+    {
+      "id": "174480f74ccca748f3f5",
+      "text": "Section: market\nticker: KTB\nas_of: 2026-09-08\nprice: 43.75\nmarket_cap: 611452.68\npe: 12.24\npbv: 1.35\nsource: SRC-SET-KTB\nnote: SET factsheet.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_market",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SET-KTB"
+        ],
+        "period": "2026-09-08"
+      }
+    },
+    {
+      "id": "2543c11dd756a63933bf",
+      "text": "Section: market\nticker: BBL\nas_of: 2026-09-08\nprice: 192.5\nmarket_cap: 367452.26\npe: 8.74\npbv: 0.64\nsource: SRC-SET-BBL\nnote: Price/market cap/P-E as of 8 Sep; P/BV latest complete value retrieved as of 7 Sep.",
+      "metadata": {
+        "ticker": "BBL",
+        "doc_type": "structured_market",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SET-BBL"
+        ],
+        "period": "2026-09-08"
+      }
+    },
+    {
+      "id": "82b27c9b78636b6476e9",
+      "text": "Section: market\nticker: TTB\nas_of: 2026-09-08\nprice: 2.92\nmarket_cap: 284908.31\npe: 12.04\npbv: 1.1\nsource: SRC-SET-TTB\nnote: Market cap retrieved as of 8 Sep; price/P-E/P-BV latest complete snapshot around 7-8 Sep.",
+      "metadata": {
+        "ticker": "TTB",
+        "doc_type": "structured_market",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SET-TTB"
+        ],
+        "period": "2026-09-08"
+      }
+    },
+    {
+      "id": "67e2e0e346916b6290ba",
+      "text": "Section: market\nticker: KKP\nas_of: 2026-09-08\nprice: 119.0\nmarket_cap: 106555.44\npe: 13.62\npbv: 1.48\nsource: SRC-SET-KKP\nnote: SET factsheet; KKP IR home also displayed 119.00 on 8 Sep 2026.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_market",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SET-KKP"
+        ],
+        "period": "2026-09-08"
+      }
+    },
+    {
+      "id": "5b0bb594c4119ee35a81",
+      "text": "Section: market\nticker: TISCO\nas_of: 2026-09-07\nprice: 126.0\nmarket_cap: 100881.35\npe: 14.69\npbv: 2.38\nsource: SRC-SET-TISCO\nnote: Latest complete SET factsheet snapshot retrieved.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_market",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SET-TISCO"
+        ],
+        "period": "2026-09-07"
+      }
+    },
+    {
+      "id": "d47e163bff33ff330b5a",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: Private Corporate\namount: 651846\nshare: 23.2\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "d3c8411037ea3e3421b4",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: Government + SOE\namount: 632529\nshare: 22.5\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "636e633c4b68cb610f55",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: SME\namount: 266538\nshare: 9.5\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "b62769e93a81512e2054",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: Retail\namount: 1257905\nshare: 44.8\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "65789bc51a38acc7a55d",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: Housing\namount: 548762\nshare: 19.5\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "7b94cf711172ab64b490",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: Personal\namount: 638079\nshare: 22.7\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "8adca6ad73923b0ee241",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: Credit Card\namount: 69721\nshare: 2.5\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "c52991222d0217fccbe4",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: Leasing\namount: 1343\nshare: 0.1\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "85a300c2eaef3319e6d5",
+      "text": "Section: loan_mix\nticker: KTB\nperiod: 2026-06-30\ntaxonomy: Business segment\ncategory: Others\namount: 327\nshare: 0.0\nstatus: REPORTED\nsource: SRC-KTB-Q2-MDA\nnote: Retail subcategories are also included; do not sum parent and child rows together.",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "9cdf9045528db59ac3be",
+      "text": "Section: loan_mix\nticker: TISCO\nperiod: 2026-06-30\ntaxonomy: Loan type\ncategory: Hire purchase\namount: 104924.64\ngrowth_qoq: 1.3\ngrowth_ytd: 2.2\nnpl_amount: 2580.52\nnpl_ratio: 2.46\nstatus: REPORTED\nsource: SRC-TISCO-Q2-MDA\nnote: TISCO group loan disclosure; parent Retail row overlaps its subcategories.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "8e1341d7870aa0b4657c",
+      "text": "Section: loan_mix\nticker: TISCO\nperiod: 2026-06-30\ntaxonomy: Loan type\ncategory: Loans against auto licenses\namount: 42025.92\ngrowth_qoq: -1.2\ngrowth_ytd: -2.7\nnpl_amount: 2015.01\nnpl_ratio: 4.79\nstatus: REPORTED\nsource: SRC-TISCO-Q2-MDA\nnote: TISCO group loan disclosure; parent Retail row overlaps its subcategories.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "1a9baa4c56677214b9e3",
+      "text": "Section: loan_mix\nticker: TISCO\nperiod: 2026-06-30\ntaxonomy: Loan type\ncategory: Housing loans\namount: 5728.62\ngrowth_qoq: -4.3\ngrowth_ytd: -7.8\nnpl_amount: 269.03\nnpl_ratio: 4.7\nstatus: REPORTED\nsource: SRC-TISCO-Q2-MDA\nnote: TISCO group loan disclosure; parent Retail row overlaps its subcategories.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "09d0f9133f78628b7e1a",
+      "text": "Section: loan_mix\nticker: TISCO\nperiod: 2026-06-30\ntaxonomy: Loan type\ncategory: Other retail\namount: 9910.95\ngrowth_qoq: 2.6\ngrowth_ytd: 5.5\nnpl_amount: 15.31\nnpl_ratio: 0.15\nstatus: REPORTED\nsource: SRC-TISCO-Q2-MDA\nnote: TISCO group loan disclosure; parent Retail row overlaps its subcategories.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "bf906f3d3a0a64f68a9b",
+      "text": "Section: loan_mix\nticker: TISCO\nperiod: 2026-06-30\ntaxonomy: Loan type\ncategory: Retail loans\namount: 162590.12\ngrowth_qoq: 0.5\ngrowth_ytd: 0.7\nnpl_amount: 4879.87\nnpl_ratio: 3.0\nstatus: REPORTED\nsource: SRC-TISCO-Q2-MDA\nnote: TISCO group loan disclosure; parent Retail row overlaps its subcategories.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "c6267813c3936882f967",
+      "text": "Section: loan_mix\nticker: TISCO\nperiod: 2026-06-30\ntaxonomy: Loan type\ncategory: Corporate loans\namount: 58992.58\ngrowth_qoq: -1.8\ngrowth_ytd: -3.2\nnpl_amount: 0\nnpl_ratio: 0\nstatus: REPORTED\nsource: SRC-TISCO-Q2-MDA\nnote: TISCO group loan disclosure; parent Retail row overlaps its subcategories.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "86448bd9d02f4fee45d9",
+      "text": "Section: loan_mix\nticker: TISCO\nperiod: 2026-06-30\ntaxonomy: Loan type\ncategory: Commercial loans\namount: 14220.08\ngrowth_qoq: 7.3\ngrowth_ytd: 6.9\nnpl_amount: 113.68\nnpl_ratio: 0.8\nstatus: REPORTED\nsource: SRC-TISCO-Q2-MDA\nnote: TISCO group loan disclosure; parent Retail row overlaps its subcategories.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "c9e7a75cf88c6e584b21",
+      "text": "Section: loan_mix\nticker: TISCO\nperiod: 2026-06-30\ntaxonomy: Loan type\ncategory: Total loans\namount: 235802.78\nshare: 100.0\ngrowth_qoq: 0.3\ngrowth_ytd: 0.0\nnpl_amount: 4993.55\nnpl_ratio: 2.12\nstatus: REPORTED\nsource: SRC-TISCO-Q2-MDA\nnote: Total loans and receivables.",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "6441852842745cbd76bd",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Auto hire purchase\namount: 143876\nnpl_amount: 3358\nnpl_ratio: 2.3\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "d60e7d9285bde2307eb4",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Personal\namount: 11109\nnpl_amount: 96\nnpl_ratio: 0.9\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "7a811b4a69e9a61ae5ff",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Micro SME\namount: 12566\nnpl_amount: 511\nnpl_ratio: 4.1\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "fb04a22f238e2176cd40",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Housing\namount: 57862\nnpl_amount: 735\nnpl_ratio: 1.3\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "003b8d5e95bfd8262710",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Retail total\namount: 225413\nnpl_amount: 4699\nnpl_ratio: 2.1\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "77807f19d7274e12851e",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Real estate business\namount: 22054\nnpl_amount: 2415\nnpl_ratio: 11.0\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "82fe9720e0a178f512b1",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Business SME\namount: 34292\nnpl_amount: 1675\nnpl_ratio: 4.9\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "ed43240538375d9f0886",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Business total\namount: 56346\nnpl_amount: 4090\nnpl_ratio: 7.3\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "1f6090c630f1177634c4",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Corporate\namount: 64705\nnpl_amount: 3087\nnpl_ratio: 4.8\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "0f4a31d0b30dc5475b15",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Debt management\namount: 1154\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "58c1a228152009f6491d",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Business / product\ncategory: Lombard\namount: 6457\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Amounts transcribed from KKP Q2 results presentation source set; category hierarchy overlaps for parent/child rows.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "6bb0fd16a7aa0900303b",
+      "text": "Section: loan_mix\nticker: KKP\nperiod: 2026-06-30\ntaxonomy: Asset quality\ncategory: Overall impaired loans\nnpl_amount: 12720\nnpl_ratio: 3.6\nstatus: REPORTED\nsource: SRC-KKP-PRES\nnote: Overall impairment ratio; ex-POCI management ratio cited around 3.5%.",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "6ed098d4d38669e257d9",
+      "text": "Section: loan_mix\nticker: SCB\nperiod: 2026-06-30\ntaxonomy: Loan portfolio by company\ncategory: Siam Commercial Bank\nshare: 92.4\nstatus: CALCULATED_FROM_SHARE\nsource: SRC-SCBX-HIGHLIGHTS\nnote: Total group loans THB 2,405 bn; amount is calculated in workbook as total × share.",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SCBX-HIGHLIGHTS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "e983f1ae63586d006a8f",
+      "text": "Section: loan_mix\nticker: SCB\nperiod: 2026-06-30\ntaxonomy: Loan portfolio by company\ncategory: CardX\nshare: 4.0\nstatus: CALCULATED_FROM_SHARE\nsource: SRC-SCBX-HIGHLIGHTS\nnote: Total group loans THB 2,405 bn; amount is calculated in workbook as total × share.",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SCBX-HIGHLIGHTS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "d274b2f1dd03c5498bee",
+      "text": "Section: loan_mix\nticker: SCB\nperiod: 2026-06-30\ntaxonomy: Loan portfolio by company\ncategory: AutoX\nshare: 1.9\nstatus: CALCULATED_FROM_SHARE\nsource: SRC-SCBX-HIGHLIGHTS\nnote: Total group loans THB 2,405 bn; amount is calculated in workbook as total × share.",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SCBX-HIGHLIGHTS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "cdeac3a4fceca01beb17",
+      "text": "Section: loan_mix\nticker: SCB\nperiod: 2026-06-30\ntaxonomy: Loan portfolio by company\ncategory: MONIX\nshare: 0.8\nstatus: CALCULATED_FROM_SHARE\nsource: SRC-SCBX-HIGHLIGHTS\nnote: Total group loans THB 2,405 bn; amount is calculated in workbook as total × share.",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SCBX-HIGHLIGHTS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "cd284fd99377cfa1072d",
+      "text": "Section: loan_mix\nticker: SCB\nperiod: 2026-06-30\ntaxonomy: Loan portfolio by company\ncategory: ABACUS digital\nshare: 0.3\nstatus: CALCULATED_FROM_SHARE\nsource: SRC-SCBX-HIGHLIGHTS\nnote: Total group loans THB 2,405 bn; amount is calculated in workbook as total × share.",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SCBX-HIGHLIGHTS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "96aa1872cd64395f6cf5",
+      "text": "Section: loan_mix\nticker: SCB\nperiod: 2026-06-30\ntaxonomy: Loan portfolio by company\ncategory: Others\nshare: 0.6\nstatus: CALCULATED_FROM_SHARE\nsource: SRC-SCBX-HIGHLIGHTS\nnote: Total group loans THB 2,405 bn; amount is calculated in workbook as total × share.",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SCBX-HIGHLIGHTS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "d12ef818049364063b5c",
+      "text": "Section: loan_mix\nticker: KBANK\nperiod: 2026-03-31\ntaxonomy: Business segment\ncategory: Corporate\namount: 991000\nshare: 41\nstatus: REPORTED_OLDER_MIX\nsource: SRC-KBANK-Q2-PRES\nnote: Business mix table shown in 2Q26 analyst deck reports 1Q26 composition; financial snapshot itself is 30 Jun 2026. Keep period explicit.",
+      "metadata": {
+        "ticker": "KBANK",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KBANK-Q2-PRES"
+        ],
+        "period": "2026-03-31"
+      }
+    },
+    {
+      "id": "9bb47e37a96938397b81",
+      "text": "Section: loan_mix\nticker: KBANK\nperiod: 2026-03-31\ntaxonomy: Business segment\ncategory: SME\namount: 588000\nshare: 24\nstatus: REPORTED_OLDER_MIX\nsource: SRC-KBANK-Q2-PRES\nnote: Business mix table shown in 2Q26 analyst deck reports 1Q26 composition; financial snapshot itself is 30 Jun 2026. Keep period explicit.",
+      "metadata": {
+        "ticker": "KBANK",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KBANK-Q2-PRES"
+        ],
+        "period": "2026-03-31"
+      }
+    },
+    {
+      "id": "7770e845de05aa7f9652",
+      "text": "Section: loan_mix\nticker: KBANK\nperiod: 2026-03-31\ntaxonomy: Business segment\ncategory: Retail\namount: 770000\nshare: 31\nstatus: REPORTED_OLDER_MIX\nsource: SRC-KBANK-Q2-PRES\nnote: Business mix table shown in 2Q26 analyst deck reports 1Q26 composition; financial snapshot itself is 30 Jun 2026. Keep period explicit.",
+      "metadata": {
+        "ticker": "KBANK",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KBANK-Q2-PRES"
+        ],
+        "period": "2026-03-31"
+      }
+    },
+    {
+      "id": "8a924f6a8dcfe683e0ea",
+      "text": "Section: loan_mix\nticker: KBANK\nperiod: 2026-03-31\ntaxonomy: Business segment\ncategory: Other\namount: 105000\nshare: 4\nstatus: REPORTED_OLDER_MIX\nsource: SRC-KBANK-Q2-PRES\nnote: Business mix table shown in 2Q26 analyst deck reports 1Q26 composition; financial snapshot itself is 30 Jun 2026. Keep period explicit.",
+      "metadata": {
+        "ticker": "KBANK",
+        "doc_type": "structured_loan_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KBANK-Q2-PRES"
+        ],
+        "period": "2026-03-31"
+      }
+    },
+    {
+      "id": "6b066e92a36fb97a5b4d",
+      "text": "Section: macro\ncategory: Monetary policy\nmetric: BOT policy rate\nvalue: 1.0\nunit: %\nref_period: 2026-08-26\nstatus: Official current decision\nsource: SRC-BOT-MPC\nnote: MPC unanimously maintained the policy rate at 1.00%.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-MPC"
+        ],
+        "period": "2026-08-26"
+      }
+    },
+    {
+      "id": "dee11e1def35a90b6f58",
+      "text": "Section: macro\ncategory: Forecast\nmetric: Thailand GDP growth 2026\nvalue: 2.3\nunit: %\nref_period: 2026 forecast (as of 2026-06-24)\nstatus: Official forecast\nsource: SRC-BOT-OUTLOOK\nnote: BOT forecast.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-OUTLOOK"
+        ],
+        "period": "2026 forecast (as of 2026-06-24)"
+      }
+    },
+    {
+      "id": "551502646fdb83530596",
+      "text": "Section: macro\ncategory: Forecast\nmetric: Thailand GDP growth 2027\nvalue: 1.8\nunit: %\nref_period: 2027 forecast (as of 2026-06-24)\nstatus: Official forecast\nsource: SRC-BOT-OUTLOOK\nnote: BOT forecast.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-OUTLOOK"
+        ],
+        "period": "2027 forecast (as of 2026-06-24)"
+      }
+    },
+    {
+      "id": "f71e5fc6df9d1a09d2af",
+      "text": "Section: macro\ncategory: Forecast\nmetric: Headline inflation 2026\nvalue: 2.8\nunit: %\nref_period: 2026 forecast (as of 2026-06-24)\nstatus: Official forecast\nsource: SRC-BOT-OUTLOOK\nnote: BOT forecast.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-OUTLOOK"
+        ],
+        "period": "2026 forecast (as of 2026-06-24)"
+      }
+    },
+    {
+      "id": "0b54466ab60ee70bd866",
+      "text": "Section: macro\ncategory: Forecast\nmetric: Core inflation 2026\nvalue: 1.5\nunit: %\nref_period: 2026 forecast (as of 2026-06-24)\nstatus: Official forecast\nsource: SRC-BOT-OUTLOOK\nnote: BOT forecast.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-OUTLOOK"
+        ],
+        "period": "2026 forecast (as of 2026-06-24)"
+      }
+    },
+    {
+      "id": "3600b815b4b5652598ea",
+      "text": "Section: macro\ncategory: Banking system\nmetric: Loan growth YoY\nvalue: 2.0\nunit: %\nref_period: 2Q 2026\nstatus: Official actual\nsource: SRC-BOT-Q2SYS\nnote: Thai banking system.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-Q2SYS"
+        ],
+        "period": "2Q 2026"
+      }
+    },
+    {
+      "id": "6b5248f1f9608f09d18d",
+      "text": "Section: macro\ncategory: Banking system\nmetric: NPL amount\nvalue: 534800\nunit: THB mn\nref_period: 2Q 2026\nstatus: Official actual\nsource: SRC-BOT-Q2SYS\nnote: Stage 3 loans / NPL amount.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-Q2SYS"
+        ],
+        "period": "2Q 2026"
+      }
+    },
+    {
+      "id": "dce63b23f39d5ff963a2",
+      "text": "Section: macro\ncategory: Banking system\nmetric: NPL ratio\nvalue: 2.82\nunit: %\nref_period: 2Q 2026\nstatus: Official actual\nsource: SRC-BOT-Q2SYS\nnote: Thai banking system.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-Q2SYS"
+        ],
+        "period": "2Q 2026"
+      }
+    },
+    {
+      "id": "d4064cb8bd0ebe08826f",
+      "text": "Section: macro\ncategory: Banking system\nmetric: Stage 2 ratio\nvalue: 6.78\nunit: %\nref_period: 2Q 2026\nstatus: Official actual\nsource: SRC-BOT-Q2SYS\nnote: Thai banking system.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-Q2SYS"
+        ],
+        "period": "2Q 2026"
+      }
+    },
+    {
+      "id": "dabed9cbc5904e9d1fcb",
+      "text": "Section: macro\ncategory: Activity\nmetric: Private consumption growth YoY\nvalue: 3.2\nunit: %\nref_period: Jul 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Jul 2026"
+      }
+    },
+    {
+      "id": "f71a02efffdad8d5e16a",
+      "text": "Section: macro\ncategory: Activity\nmetric: Private investment growth YoY\nvalue: 12.9\nunit: %\nref_period: Jul 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Jul 2026"
+      }
+    },
+    {
+      "id": "e01e7263256a6cbe0c47",
+      "text": "Section: macro\ncategory: Activity\nmetric: Manufacturing Production Index growth YoY\nvalue: 0.5\nunit: %\nref_period: Jul 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Jul 2026"
+      }
+    },
+    {
+      "id": "89ded4d7c053e256c07f",
+      "text": "Section: macro\ncategory: External\nmetric: Exports growth YoY\nvalue: 22.3\nunit: %\nref_period: Jul 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Jul 2026"
+      }
+    },
+    {
+      "id": "75da2cd7704399244977",
+      "text": "Section: macro\ncategory: Tourism\nmetric: Tourist arrivals YTD\nvalue: 18.6\nunit: million persons\nref_period: Jul 2026 YTD\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Jul 2026 YTD"
+      }
+    },
+    {
+      "id": "88353379f4d19317fc3c",
+      "text": "Section: macro\ncategory: External\nmetric: Current account\nvalue: -1.6\nunit: USD bn\nref_period: Jul 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Jul 2026"
+      }
+    },
+    {
+      "id": "d31b54a40696c66706ae",
+      "text": "Section: macro\ncategory: Inflation\nmetric: Headline inflation YoY\nvalue: 2.53\nunit: %\nref_period: Aug 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Aug 2026"
+      }
+    },
+    {
+      "id": "9a9401db49e9069bb108",
+      "text": "Section: macro\ncategory: Inflation\nmetric: Core inflation YoY\nvalue: 1.44\nunit: %\nref_period: Aug 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Aug 2026"
+      }
+    },
+    {
+      "id": "993c28db11b8dfc58988",
+      "text": "Section: macro\ncategory: Labor\nmetric: Unemployment rate\nvalue: 0.89\nunit: %\nref_period: 2Q 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "2Q 2026"
+      }
+    },
+    {
+      "id": "7bb47bd649d8ca527980",
+      "text": "Section: macro\ncategory: Credit\nmetric: Private credit growth YoY\nvalue: 2.7\nunit: %\nref_period: Jul 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Jul 2026"
+      }
+    },
+    {
+      "id": "26731c8e4fbc222d4b8a",
+      "text": "Section: macro\ncategory: Confidence\nmetric: Business Sentiment Index\nvalue: 49.8\nunit: index\nref_period: Aug 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Aug 2026"
+      }
+    },
+    {
+      "id": "4642a518560fdf8b4bd8",
+      "text": "Section: macro\ncategory: Confidence\nmetric: Business Sentiment Index 3-month expected\nvalue: 50.5\nunit: index\nref_period: Aug 2026\nstatus: Official current indicator\nsource: SRC-BOT-ECON\nnote: BOT current-statistics page.",
+      "metadata": {
+        "ticker": null,
+        "doc_type": "structured_macro",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BOT-ECON"
+        ],
+        "period": "Aug 2026"
+      }
+    },
+    {
+      "id": "8e03d3b740ec0bb71645",
+      "text": "Section: asset_quality\nticker: KTB\nperiod: 2026-06-30\nscope: Consolidated loans\nstage: Stage 1 / Performing\namount_mn: 2541035\nsource: SRC-KTB-Q2-MDA",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_asset_quality",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "727af8966b37054a6bc6",
+      "text": "Section: asset_quality\nticker: KTB\nperiod: 2026-06-30\nscope: Consolidated loans\nstage: Stage 2 / Under-performing\namount_mn: 197068\nsource: SRC-KTB-Q2-MDA",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_asset_quality",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "a33f57218c6ae8bb9ddf",
+      "text": "Section: asset_quality\nticker: KTB\nperiod: 2026-06-30\nscope: Consolidated loans\nstage: Stage 3 / NPL\namount_mn: 93344\nnpl_amount_mn: 93706\nnpl_ratio_pct: 2.92\ncoverage_pct: 205.2\ncredit_cost_bps: 95\nsource: SRC-KTB-Q2-MDA",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_asset_quality",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "feb13c564fea1640396e",
+      "text": "Section: asset_quality\nticker: TISCO\nperiod: 2026-06-30\nscope: Group loans\nstage: Stage 1 / Performing\namount_mn: 214098.36\nsource: SRC-TISCO-Q2-MDA",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_asset_quality",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "dc5365c739d84eeb8050",
+      "text": "Section: asset_quality\nticker: TISCO\nperiod: 2026-06-30\nscope: Group loans\nstage: Stage 2 / Under-performing\namount_mn: 16710.87\ncalculated_ratio_pct: 7.08679940075346\nsource: SRC-TISCO-Q2-MDA",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_asset_quality",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "a7ef26c6c0f5cff61b30",
+      "text": "Section: asset_quality\nticker: TISCO\nperiod: 2026-06-30\nscope: Group loans\nstage: Stage 3 / NPL\namount_mn: 4993.55\nnpl_ratio_pct: 2.12\nallowance_mn: 9495.74\ncoverage_pct: 190.2\ncredit_cost_bps: 90\nsource: SRC-TISCO-Q2-MDA",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_asset_quality",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "b4b549116ac8f40af30b",
+      "text": "Section: funding_mix\nticker: TISCO\nperiod: 2026-06-30\ncurrent_mn: 1830.0\nsavings_mn: 32164.79\nfixed_mn: 63688.85\nnegotiable_cd_mn: 117098.88\ntotal_deposits_mn: 214801.29\nsource: SRC-TISCO-Q2-MDA",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_funding_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "45e41525bfcd12097088",
+      "text": "Section: funding_mix\nticker: KKP\nperiod: 2026-06-30\ncurrent_mn: 1311\nsavings_mn: 189757\nterm_mn: 165527\ntotal_deposits_mn: 356617\ncasa_pct_reported: 53.6\nsource: SRC-KKP-PRES",
+      "metadata": {
+        "ticker": "KKP",
+        "doc_type": "structured_funding_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KKP-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "9bb7c26408fec0a0a5f1",
+      "text": "Section: funding_mix\nticker: KBANK\nperiod: 2026-06-30\ncasa_pct_reported: 83.0\nsource: SRC-KBANK-Q2-PRES",
+      "metadata": {
+        "ticker": "KBANK",
+        "doc_type": "structured_funding_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KBANK-Q2-PRES"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "fc208d735aa45c58a709",
+      "text": "Section: funding_mix\nticker: KTB\nperiod: 2026-06-30\ncasa_pct_reported: 80.0\nsource: SRC-KTB-Q2-MDA",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_funding_mix",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "54449b7019f6a40bb02d",
+      "text": "Section: capital_entity\nticker: KBANK\nperiod: 2026-06-30\nscope: Financial conglomerate\ncar_pct: 19.24\ntier1_pct: 17.35\nsource: SRC-KBANK-Q2-FS",
+      "metadata": {
+        "ticker": "KBANK",
+        "doc_type": "structured_capital_entity",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KBANK-Q2-FS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "f6b3df8cf23682494c2b",
+      "text": "Section: capital_entity\nticker: SCB\nperiod: 2026-06-30\nscope: SCBX group\ncar_pct: 18.6\ncet1_pct: 17.4\nsource: SRC-SCBX-HIGHLIGHTS",
+      "metadata": {
+        "ticker": "SCB",
+        "doc_type": "structured_capital_entity",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-SCBX-HIGHLIGHTS"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "1f00b093bca5d53c4aaf",
+      "text": "Section: capital_entity\nticker: KTB\nperiod: 2026-06-30\nscope: Financial business group\ncar_pct: 20.7\ncet1_pct: 18.7\nsource: SRC-KTB-Q2-MDA",
+      "metadata": {
+        "ticker": "KTB",
+        "doc_type": "structured_capital_entity",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-KTB-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "94f9d6f17777e314d51c",
+      "text": "Section: capital_entity\nticker: BBL\nperiod: 2026-06-30\nscope: Consolidated bank\ncar_pct: 21.4\ncet1_pct: 16.9\ntier1_pct: 16.9\nsource: SRC-BBL-FININFO",
+      "metadata": {
+        "ticker": "BBL",
+        "doc_type": "structured_capital_entity",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-BBL-FININFO"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "48aa812e979cc57debfb",
+      "text": "Section: capital_entity\nticker: TTB\nperiod: 2026-06-30\nscope: Bank and subsidiaries\ncar_pct: 19.0\ntier1_pct: 17.0\nsource: SRC-TTB-Q2",
+      "metadata": {
+        "ticker": "TTB",
+        "doc_type": "structured_capital_entity",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TTB-Q2"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "5fec945c75d7637ad6f6",
+      "text": "Section: capital_entity\nticker: TISCO\nperiod: 2026-06-30\nscope: TISCO Financial Group\ncar_pct: 19.3\ntier1_pct: 17.0\ntier2_pct: 2.3\nstatus: projected_reported\nsource: SRC-TISCO-Q2-MDA",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_capital_entity",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    },
+    {
+      "id": "df7b9e9108efac707137",
+      "text": "Section: capital_entity\nticker: TISCO\nperiod: 2026-06-30\nscope: TISCO Bank\ncar_pct: 20.6\ntier1_pct: 18.2\ntier2_pct: 2.5\nstatus: projected_reported\nsource: SRC-TISCO-Q2-MDA",
+      "metadata": {
+        "ticker": "TISCO",
+        "doc_type": "structured_capital_entity",
+        "source_kind": "structured_fact",
+        "source_ids": [
+          "SRC-TISCO-Q2-MDA"
+        ],
+        "period": "2026-06-30"
+      }
+    }
+  ]
+}

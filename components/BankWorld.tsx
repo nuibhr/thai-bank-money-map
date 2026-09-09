@@ -5,18 +5,14 @@ import { Html, OrbitControls, Grid } from '@react-three/drei';
 import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
+import bankLayout from '@/data/banks.json';
+import {BankInterior} from './BankInterior';
+import type {SectionId} from '@/lib/bank-sections';
+import type {OrbitControls as ControlsImpl} from 'three-stdlib';
 
 export type Bank = { ticker: string; position: [number, number, number]; height: number };
 
-export const BANKS: Bank[] = [
-  { ticker: 'KBANK', position: [-9, 0, 0], height: 7.5 },
-  { ticker: 'SCB', position: [-6, 0, -3], height: 8.5 },
-  { ticker: 'KTB', position: [-3, 0, 1], height: 9 },
-  { ticker: 'BBL', position: [0, 0, -2], height: 10 },
-  { ticker: 'TTB', position: [3, 0, 1], height: 6.5 },
-  { ticker: 'KKP', position: [6, 0, -3], height: 5.5 },
-  { ticker: 'TISCO', position: [9, 0, 0], height: 5 },
-];
+export const BANKS = bankLayout as Bank[];
 
 function Tower({ bank, selected, onSelect }: { bank: Bank; selected: boolean; onSelect: (b: Bank) => void }) {
   return (
@@ -72,44 +68,24 @@ function Flow({ bank }: { bank: Bank }) {
   );
 }
 
-function CameraRig({ selected }: { selected: Bank | null }) {
-  const { camera } = useThree();
-  useEffect(() => {
-    if (!selected) return;
-    const [x,,z] = selected.position;
-    gsap.to(camera.position, {
-      x: x + 5,
-      y: selected.height + 4,
-      z: z + 8,
-      duration: 1.6,
-      ease: 'power3.inOut',
-      onUpdate: () => camera.lookAt(x, selected.height / 2, z),
-    });
-  }, [selected, camera]);
-  return null;
+type WorldProps={selected:Bank|null;onSelect:(b:Bank)=>void;interior:boolean;section:SectionId|null;metric:string|null;onSection:(s:SectionId)=>void;onMetric:(s:string)=>void};
+function CameraRig({selected,interior}:{selected:Bank|null;interior:boolean}){
+ const {camera}=useThree();const controls=useRef<ControlsImpl>(null);
+ useEffect(()=>{const c=controls.current;if(!c)return;const p=selected?.position??[0,0,0];
+ const target=selected?[p[0]+(interior?1.5:0),interior?3:selected.height/2,p[2]]:[0,2,0];
+ const pos=selected?[p[0]+(interior?9:5),interior?7:selected.height+4,p[2]+(interior?14:8)]:[0,16,28];
+ c.enabled=false;const tl=gsap.timeline({onComplete:()=>{c.enabled=true}});
+ tl.to(camera.position,{x:pos[0],y:pos[1],z:pos[2],duration:1.6,ease:'power3.inOut'},0).to(c.target,{x:target[0],y:target[1],z:target[2],duration:1.6,ease:'power3.inOut',onUpdate:()=>c.update()},0);
+ return()=>{tl.kill();c.enabled=true};},[selected,interior,camera]);
+ return <OrbitControls ref={controls} makeDefault enableDamping dampingFactor={.05} minDistance={4} maxDistance={55} maxPolarAngle={Math.PI/2.05}/>;
 }
-
-function Scene({ selected, onSelect }: { selected: Bank | null; onSelect: (b: Bank) => void }) {
-  return (
-    <>
-      <color attach="background" args={['#02050a']} />
-      <fog attach="fog" args={['#02050a', 24, 65]} />
-      <ambientLight intensity={1.1} />
-      <directionalLight position={[15, 25, 10]} intensity={2.8} />
-      <pointLight position={[0, 12, 0]} intensity={80} distance={40} />
-      <CameraRig selected={selected} />
-      {BANKS.map((b) => <Tower key={b.ticker} bank={b} selected={selected?.ticker===b.ticker} onSelect={onSelect} />)}
-      {BANKS.map((b) => <Flow key={'f-'+b.ticker} bank={b} />)}
-      <Grid args={[80,80]} cellSize={1} cellThickness={0.5} sectionSize={5} sectionThickness={1} fadeDistance={45} infiniteGrid />
-      <OrbitControls makeDefault enableDamping dampingFactor={0.05} minDistance={8} maxDistance={55} maxPolarAngle={Math.PI/2.05} />
-    </>
-  );
-}
-
-export default function BankWorld({ selected, onSelect }: { selected: Bank | null; onSelect: (b: Bank) => void }) {
-  return (
-    <Canvas camera={{ position: [0,16,28], fov: 45 }} dpr={[1,1.5]}>
-      <Scene selected={selected} onSelect={onSelect} />
-    </Canvas>
-  );
-}
+function Scene(props:WorldProps){const {selected,onSelect,interior}=props;return <>
+ <color attach="background" args={['#02050a']}/><fog attach="fog" args={['#02050a',24,65]}/>
+ <ambientLight intensity={1.1}/><directionalLight position={[15,25,10]} intensity={2.8}/><pointLight position={[0,12,0]} intensity={80} distance={40}/>
+ <CameraRig selected={selected} interior={interior}/>
+ {!interior&&BANKS.map(b=><Tower key={b.ticker} bank={b} selected={selected?.ticker===b.ticker} onSelect={onSelect}/>)}
+ {interior&&selected&&<BankInterior bank={selected} section={props.section} metric={props.metric} onSection={props.onSection} onMetric={props.onMetric}/>}
+ {BANKS.filter(b=>!interior||b.ticker===selected?.ticker).map(b=><Flow key={b.ticker} bank={b}/>)}
+ <Grid args={[80,80]} cellSize={1} cellThickness={.5} sectionSize={5} sectionThickness={1} fadeDistance={45} infiniteGrid/>
+ </>}
+export default function BankWorld(props:WorldProps){return <Canvas camera={{position:[0,16,28],fov:45}} dpr={[1,1.5]}><Scene {...props}/></Canvas>}
