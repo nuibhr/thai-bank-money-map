@@ -1,0 +1,8 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const ts=require('typescript');const vm=require('node:vm');const path=require('node:path');
+const source=ts.transpileModule(fs.readFileSync('lib/bank-rag.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,esModuleInterop:true,target:ts.ScriptTarget.ES2020}}).outputText;
+const mod={exports:{}};vm.runInNewContext(source,{exports:mod.exports,require:p=>require(path.resolve(p.replace('@/', ''))),Set,Error,Math});const {searchBankRag,tickers}=mod.exports;
+test('Every bank is isolated and unknown metrics remain null',()=>{for(const ticker of tickers){const r=searchBankRag(ticker);assert.equal(r.bank.ticker,ticker);for(const c of r.documents)assert.equal(c.metadata.ticker,ticker);for(const row of r.loanMix)assert.equal(row.ticker,ticker)}assert.equal(searchBankRag('KBANK').bank.cet1,null)});
+test('Unknown bank and period do not silently fall back',()=>{assert.throws(()=>searchBankRag('UNKNOWN'));assert.throws(()=>searchBankRag('KBANK','','1900-01-01'))});
+test('A bank name in query cannot change the selected institution',()=>{const r=searchBankRag('KBANK','TISCO NPL');assert.equal(r.ticker,'KBANK');for(const c of r.documents)assert.equal(c.metadata.ticker,'KBANK')});
+test('No lexical matches produce no evidence; results are bounded',()=>{assert.equal(searchBankRag('KBANK','zzzzzzzzzz').documents.length,0);assert.ok(searchBankRag('KBANK','','',999).documents.length<=20)});
+test('Financial and market dates stay separate, source list resolves',()=>{const r=searchBankRag('KBANK');assert.equal(r.period,'2026-06-30');assert.notEqual(r.market[0].as_of,r.period);assert.ok(r.sources.length>0);assert.equal(r.meta.corpus_file_count,0)});

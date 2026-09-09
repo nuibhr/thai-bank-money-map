@@ -1,48 +1,29 @@
 'use client';
-
-import { useState } from 'react';
-import BankWorld, { type Bank } from '@/components/BankWorld';
-
-export default function Home() {
-  const [selected, setSelected] = useState<Bank | null>(null);
-
-  return (
-    <main style={{position:'relative',width:'100vw',height:'100vh',overflow:'hidden',background:'#02050a'}}>
-      <div style={{position:'absolute',inset:0}}>
-        <BankWorld selected={selected} onSelect={setSelected} />
-      </div>
-
-      <div style={{position:'absolute',left:28,top:24,zIndex:10,pointerEvents:'none'}}>
-        <div style={{fontSize:12,letterSpacing:'.32em',color:'#7dd3fc'}}>หนุ่มนักออม</div>
-        <h1 style={{margin:'8px 0 4px',fontSize:34}}>THAI BANK MONEY MAP</h1>
-        <div style={{color:'#94a3b8'}}>เข้าใจหุ้นแบงก์ ผ่านเส้นทางของเงิน</div>
-        <div style={{marginTop:10,color:'#cbd5e1',fontSize:14}}>ตามเงิน → ตามความเสี่ยง → ตามกำไร → แล้วค่อยดูราคา</div>
-      </div>
-
-      <button
-        onClick={() => alert('FOLLOW ฿100 cinematic flow — next build')}
-        style={{position:'absolute',left:28,bottom:28,zIndex:10,border:'1px solid rgba(255,255,255,.18)',background:'rgba(5,12,20,.78)',color:'white',padding:'12px 18px',borderRadius:999,cursor:'pointer',backdropFilter:'blur(12px)'}}
-      >
-        FOLLOW ฿100
-      </button>
-
-      {selected && (
-        <aside style={{position:'absolute',right:20,top:20,bottom:20,width:360,zIndex:20,border:'1px solid rgba(255,255,255,.12)',background:'rgba(2,5,10,.82)',backdropFilter:'blur(18px)',borderRadius:18,padding:20,overflow:'auto'}}>
-          <button onClick={() => setSelected(null)} style={{float:'right',border:0,background:'rgba(255,255,255,.08)',color:'white',borderRadius:8,padding:'6px 10px',cursor:'pointer'}}>✕</button>
-          <div style={{fontSize:12,letterSpacing:'.18em',color:'#34d399'}}>BANK FOCUS</div>
-          <h2 style={{fontSize:42,margin:'6px 0'}}>{selected.ticker}</h2>
-          <div style={{color:'#94a3b8',fontSize:13}}>Q2 / 2026</div>
-          <hr style={{border:0,borderTop:'1px solid rgba(255,255,255,.1)',margin:'18px 0'}} />
-          <div style={{fontSize:13,color:'#cbd5e1',lineHeight:1.7}}>
-            <b>3D interaction connected.</b><br/>
-            Investor metrics and RAG source panel will be wired in the next build. Unknown values will never be fabricated.
-          </div>
-        </aside>
-      )}
-
-      <div style={{position:'absolute',right:20,bottom:16,zIndex:10,fontSize:11,color:'#64748b',maxWidth:520,textAlign:'right'}}>
-        ข้อมูลเพื่อการศึกษาและวิเคราะห์ ไม่ใช่คำแนะนำซื้อขายหลักทรัพย์ และผลลัพธ์จากแบบจำลองไม่ใช่ Guidance ของบริษัท
-      </div>
-    </main>
-  );
+import dynamic from 'next/dynamic';
+import {useEffect,useState} from 'react';
+import type {Bank} from '@/components/BankWorld';
+import bankLayout from '@/data/banks.json';
+const BANKS=bankLayout as Bank[];
+import ResearchPanel from '@/components/ResearchPanel';
+import {sections,type SectionId} from '@/lib/bank-sections';
+const BankWorld=dynamic(()=>import('@/components/BankWorld'),{ssr:false});
+export default function Home(){
+ const [selected,setSelected]=useState<Bank|null>(null),[interior,setInterior]=useState(false),[section,setSection]=useState<SectionId|null>(null),[metric,setMetric]=useState<string|null>(null),[journey,setJourney]=useState(false);
+ const choose=(bank:Bank)=>{setSelected(bank);setInterior(false);setSection(null);setMetric(null);setJourney(false)};
+ const openSection=(s:SectionId)=>{setSection(s);setMetric(null);setJourney(false)};
+ const overview=()=>{setSelected(null);setInterior(false);setSection(null);setMetric(null);setJourney(false)};
+ useEffect(()=>{if(!journey)return;let step=0;setSection(sections[0].id);const timer=setInterval(()=>{step++;if(step>=sections.length){setJourney(false);clearInterval(timer)}else {setSection(sections[step].id);setMetric(null)}},5500);return()=>clearInterval(timer)},[journey]);
+ return <main className="bank-app">
+ <BankWorld selected={selected} onSelect={choose} interior={interior} section={section} metric={metric} onSection={openSection} onMetric={setMetric}/>
+ <header className="brand-header"><button onClick={overview}><span>หนุ่มนักออม</span><strong>THAI BANK MONEY MAP</strong></button><small>เข้าใจหุ้นแบงก์ ผ่านเส้นทางของเงิน</small></header>
+ <div className="world-navigation"><button onClick={overview}>โลกธนาคาร</button>{selected&&<><span>›</span><button onClick={()=>{setInterior(true);setSection(null);setJourney(false)}}>{selected.ticker}</button></>}{section&&<><span>›</span><span>{sections.find(s=>s.id===section)?.label}</span></>}</div>
+ {!selected&&<div className="world-intro"><h1>เข้าไปดูว่า<br/>เงินทำงานอย่างไร</h1><p>คลิกตึกเพื่อสำรวจโครงสร้างภายใน<br/>ลากหมุน · คลิกขวาเลื่อน · Scroll ซูม</p></div>}
+ {selected&&<aside className="research-panel"><div className="panel-heading"><div><small>{interior?'INSIDE THE BANK':'BANK FOCUS'}</small><h2>{selected.ticker}</h2></div><button onClick={overview} aria-label="ปิดรายละเอียด">✕</button></div>
+ {!interior?<button className="enter-bank" onClick={()=>{setInterior(true);setSection('funding')}}>เข้าไปในตึก →</button>:<nav className="floor-tabs" aria-label="ชั้นธุรกิจ">{sections.map(s=><button className={section===s.id?'active':''} key={s.id} onClick={()=>openSection(s.id)}>{s.label}</button>)}</nav>}
+ <ResearchPanel key={selected.ticker} ticker={selected.ticker} section={section} metric={metric} onMetric={setMetric}/>
+ </aside>}
+ <footer className="world-footer"><nav aria-label="เลือกธนาคาร">{BANKS.map(b=><button key={b.ticker} className={selected?.ticker===b.ticker?'active':''} onClick={()=>choose(b)}>{b.ticker}</button>)}</nav><button className="follow-money" onClick={()=>{if(journey){setJourney(false);return}setSelected(selected||BANKS[0]);setInterior(true);setMetric(null);setJourney(true)}}>{journey?'หยุดเรื่องราว':'ตามเงิน ฿100 →'}</button><small>อาคารและเส้นเงินเป็นภาพจำลองเพื่อการศึกษา ไม่สื่อสัดส่วนเงินจริง</small></footer>
+ {journey&&<div className="story-caption"><b>EDUCATIONAL SIMPLIFIED MODEL</b><p>เงินฝากเป็นเงินทุน → จัดสรรเป็นสินทรัพย์ → เกิดรายได้ → หักต้นทุนและสำรอง → เหลือกำไร → สะสมทุนหรือจ่ายคืนผู้ถือหุ้น</p></div>}
+ <details className="disclaimer"><summary>ข้อมูลและข้อจำกัด</summary><p>ข้อมูลนี้จัดทำขึ้นเพื่อการศึกษาและการวิเคราะห์เท่านั้น ไม่ใช่คำแนะนำในการซื้อหรือขายหลักทรัพย์ ข้อมูลจาก AI หรือแบบจำลองอาจไม่ครบถ้วนหรือคลาดเคลื่อน นักลงทุนควรตรวจสอบข้อมูลจากแหล่งอ้างอิงและพิจารณาความเสี่ยงก่อนตัดสินใจลงทุน</p><p>ผลลัพธ์จากแบบจำลอง ไม่ใช่ประมาณการหรือ Guidance ของบริษัท</p></details>
+ </main>
 }

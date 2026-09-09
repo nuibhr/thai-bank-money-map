@@ -4,3 +4,10 @@ node_modules
 .env
 .env.local
 .DS_Store
+
+research/data/corpus/
+research/data/generated/
+research/.venv/
+__pycache__/
+*.pyc
+*.tsbuildinfo
