@@ -31,3 +31,6 @@ There is no public upload endpoint or automatic live sync in this version.
 `npm run build`
 
 3D browser acceptance requires a WebGL-capable browser. Build and retrieval tests do not establish visual or GPU performance acceptance.
+
+## Spatial navigation refinement
+Left-side layer navigation, contextual upstream/downstream links, expandable bank floors, and separate evidence/source views follow the exploration pattern requested in the INVX reference. The actual WebGL scene is schematic banking geometry; no INVX assets, company data or branding were copied.
