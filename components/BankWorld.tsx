@@ -1,94 +1,30 @@
 'use client';
-
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Html, OrbitControls, Grid } from '@react-three/drei';
-import { useEffect, useMemo, useRef } from 'react';
-import * as THREE from 'three';
-import gsap from 'gsap';
-import bankLayout from '@/data/banks.json';
+import {Canvas} from '@react-three/fiber';
+import {useEffect,useState} from 'react';
+import {Html} from '@react-three/drei';
+import {banks,origins,sectors,engines,type Bank,type Mode,type WorldData,type V3,type Place} from '@/lib/world/model';
 import {BankInterior} from './BankInterior';
-import {sections,type SectionId} from '@/lib/bank-sections';
-import type {OrbitControls as ControlsImpl} from 'three-stdlib';
-
-export type Bank = { ticker: string; position: [number, number, number]; height: number };
-
-export const BANKS = bankLayout as Bank[];
-
-function Tower({ bank, selected, onSelect }: { bank: Bank; selected: boolean; onSelect: (b: Bank) => void }) {
-  return (
-    <group position={bank.position}>
-      <mesh position={[0, bank.height / 2, 0]} onClick={(e) => { e.stopPropagation(); onSelect(bank); }}>
-        <boxGeometry args={[2.4, bank.height, 2.4]} />
-        <meshStandardMaterial
-          color={selected ? '#7fffd4' : '#17314d'}
-          emissive={selected ? '#2ee6b8' : '#06111d'}
-          emissiveIntensity={selected ? 1.5 : 0.45}
-          metalness={0.85}
-          roughness={0.25}
-        />
-      </mesh>
-      {Array.from({length:9},(_,i)=><mesh key={i} position={[0,.7+i*.65,1.21]}><boxGeometry args={[2.1,.035,.015]}/><meshBasicMaterial color={selected?'#9aeddb':'#48718e'}/></mesh>)}
-      <mesh position={[0,bank.height+.2,0]}><boxGeometry args={[1.7,.4,1.7]}/><meshStandardMaterial color="#315370" metalness={.8} roughness={.2}/></mesh>
-      <Html position={[0, bank.height + 1, 0]} center distanceFactor={12}>
-        <div style={{color:'white',fontWeight:800,fontSize:16,background:'rgba(0,0,0,.6)',border:'1px solid rgba(255,255,255,.18)',padding:'5px 8px',borderRadius:8,whiteSpace:'nowrap'}}>{bank.ticker}</div>
-      </Html>
-    </group>
-  );
-}
-
-function MovingParticle({ curve }: { curve: THREE.CatmullRomCurve3 }) {
-  const ref = useRef<THREE.Mesh>(null);
-  useFrame(({ clock }) => {
-    const p = curve.getPointAt((clock.elapsedTime * 0.18) % 1);
-    ref.current?.position.copy(p);
-  });
-  return (
-    <mesh ref={ref}>
-      <sphereGeometry args={[0.13, 12, 12]} />
-      <meshStandardMaterial color="#ffd166" emissive="#ffb703" emissiveIntensity={4} />
-    </mesh>
-  );
-}
-
-function Flow({ bank }: { bank: Bank }) {
-  const curve = useMemo(() => {
-    const [x,,z] = bank.position;
-    return new THREE.CatmullRomCurve3([
-      new THREE.Vector3(x, 0.2, z - 7),
-      new THREE.Vector3(x, 3.5, z - 3.5),
-      new THREE.Vector3(x, 1.3, z),
-    ]);
-  }, [bank]);
-  return (
-    <>
-      <mesh>
-        <tubeGeometry args={[curve, 40, 0.035, 8, false]} />
-        <meshStandardMaterial color="#2ac7ff" emissive="#2ac7ff" emissiveIntensity={1.5} transparent opacity={0.5} />
-      </mesh>
-      <MovingParticle curve={curve} />
-    </>
-  );
-}
-
-type WorldProps={selected:Bank|null;onSelect:(b:Bank)=>void;interior:boolean;expanded:boolean;section:SectionId|null;metric:string|null;onSection:(s:SectionId)=>void;onMetric:(s:string)=>void};
-function CameraRig({selected,interior,expanded,section}:{selected:Bank|null;interior:boolean;expanded:boolean;section:SectionId|null}){
- const {camera}=useThree();const controls=useRef<ControlsImpl>(null);
- useEffect(()=>{const c=controls.current;if(!c)return;const p=selected?.position??[0,0,0];
- const focusY=section?.length?Math.max(2,.7+sections.findIndex(s=>s.id===section)*(expanded?1.6:.75)):3;
- const target=selected?[p[0]+(interior?1.5:0),interior?focusY:selected.height/2,p[2]]:[0,2,0];
- const pos=selected?[p[0]+(interior?9:5),interior?focusY+5:selected.height+4,p[2]+(interior?18:8)]:[0,16,28];
- c.enabled=false;const tl=gsap.timeline({onComplete:()=>{c.enabled=true}});
- tl.to(camera.position,{x:pos[0],y:pos[1],z:pos[2],duration:1.6,ease:'power3.inOut'},0).to(c.target,{x:target[0],y:target[1],z:target[2],duration:1.6,ease:'power3.inOut',onUpdate:()=>c.update()},0);
- return()=>{tl.kill();c.enabled=true};},[selected,interior,expanded,section,camera]);
- return <OrbitControls ref={controls} makeDefault enableDamping dampingFactor={.05} minDistance={4} maxDistance={55} maxPolarAngle={Math.PI/2.05}/>;
-}
-function Scene(props:WorldProps){const {selected,onSelect,interior}=props;return <>
- <color attach="background" args={['#02050a']}/><fog attach="fog" args={['#02050a',24,65]}/>
- <ambientLight intensity={1.1}/><directionalLight position={[15,25,10]} intensity={2.8}/><pointLight position={[0,12,0]} intensity={80} distance={40}/>
- <CameraRig selected={selected} interior={interior} expanded={props.expanded} section={props.section}/>
- {!interior&&BANKS.map(b=><Tower key={b.ticker} bank={b} selected={selected?.ticker===b.ticker} onSelect={onSelect}/>)}
- {interior&&selected&&<BankInterior bank={selected} expanded={props.expanded} section={props.section} metric={props.metric} onSection={props.onSection} onMetric={props.onMetric}/>}
- {BANKS.filter(b=>!interior||b.ticker===selected?.ticker).map(b=><Flow key={b.ticker} bank={b}/>)}
- <Grid args={[80,80]} cellSize={1} cellThickness={.5} sectionSize={5} sectionThickness={1} fadeDistance={45} infiniteGrid/>
+import {PremiumTower,District,FinancialEngine} from './world/Architecture';
+import {MoneyNetwork,type Stream} from './world/MoneyNetwork';
+import CameraDirector from './world/CameraDirector';
+import ValuationGalaxy from './world/ValuationGalaxy';
+import type {SectionId} from '@/lib/bank-sections';
+export type {Bank} from '@/lib/world/model';
+export const BANKS=banks;
+export type WorldProps={selected:Bank|null;onSelect:(b:Bank)=>void;onEnter:(b:Bank)=>void;interior:boolean;expanded:boolean;section:SectionId|null;metric:string|null;onSection:(s:SectionId)=>void;onMetric:(s:string)=>void;mode:Mode;data:WorldData|null;sector:string|null;onPlace:(p:Place)=>void;onStream:(s:Stream)=>void;journey:number;paused:boolean;onStep:(n:number)=>void;onComplete:()=>void;focus:V3|null;nonce:number;stress:number;comparison:string[];low:boolean;onValuation:(ticker:string,p:V3)=>void};
+function Scene(p:WorldProps){const visibleStress=p.mode==='risk'?p.stress:0;return <>
+ <color attach="background" args={['#080f18']}/><fog attach="fog" args={['#080f18',95,255]}/><ambientLight intensity={1.5}/><hemisphereLight args={['#bcd8eb','#101724',1.4]}/><directionalLight position={[-25,70,30]} intensity={3.5} castShadow shadow-mapSize={[p.low?512:2048,p.low?512:2048]} shadow-camera-left={-70} shadow-camera-right={70} shadow-camera-top={70} shadow-camera-bottom={-70}/><directionalLight position={[35,20,-35]} color="#799ab9" intensity={2}/>
+ <mesh rotation={[-Math.PI/2,0,0]} position={[0,-.3,0]} receiveShadow><planeGeometry args={[220,220]}/><meshStandardMaterial color="#101e2b" metalness={.32} roughness={.55}/></mesh>
+ <gridHelper args={[180,60,'#264252','#182d3c']} position={[0,-.27,0]}/>
+ {p.mode==='valuation'?<ValuationGalaxy data={p.data} selected={p.selected?.ticker??null} onSelect={p.onValuation}/>:<>
+ <mesh position={[0,-.05,0]}><cylinderGeometry args={[23,24,.4,64]}/><meshStandardMaterial color="#172b3b" metalness={.55} roughness={.42}/></mesh>
+ {banks.map(b=>{const ci=p.comparison.indexOf(b.ticker);const compare=p.mode==='compare'&&ci>=0;const target:V3=compare?[(ci-(p.comparison.length-1)/2)*12,0,0]:b.position;return p.interior&&p.selected?.ticker===b.ticker?<BankInterior key={b.ticker} bank={b} expanded={p.expanded} section={p.section} metric={p.metric} onSection={p.onSection} onMetric={p.onMetric}/>:<PremiumTower key={b.ticker} bank={b} target={target} selected={p.selected?.ticker===b.ticker} dim={p.interior||p.mode==='compare'&&!compare||!!p.selected&&p.selected.ticker!==b.ticker} onSelect={()=>p.onSelect(b)} onEnter={()=>p.onEnter(b)} compare={compare} snapshot={p.data?.banks.find(x=>x.ticker===b.ticker)}/>})}
+ {origins.map(o=><District key={o.id} place={o} low={p.low} color="#669ebc" active={p.mode==='funding'} onSelect={()=>p.onPlace(o)}/>)}
+ {sectors.map(s=><District key={s.id} place={s} low={p.low} color="#8cb7a5" active={s.id===p.sector||p.mode==='concentration'&&!!p.data?.banks.find(b=>b.ticker===p.selected?.ticker)?.exposures.some(e=>!e.company&&e.destination===s.id)} onSelect={()=>p.onPlace(s)}/>)}
+ {engines.map(e=><FinancialEngine key={e.id} place={e} stress={visibleStress} active={p.mode==='risk'||p.mode==='profit'} onSelect={()=>p.onPlace(e)}/>)}
+ {p.mode!=='compare'&&<MoneyNetwork mode={p.mode} ticker={p.selected?.ticker??null} data={p.data} sector={p.sector} stress={visibleStress} paused={p.paused} low={p.low} onStream={p.onStream}/>}
+ <Html center position={[0,.6,-22]} zIndexRange={[2,0]}><div className="ground-title">THE BANKING DISTRICT<span>เงินทุน • ความเสี่ยง • ผลตอบแทน</span></div></Html>
  </>}
-export default function BankWorld(props:WorldProps){return <Canvas camera={{position:[0,16,28],fov:45}} dpr={[1,1.5]}><Scene {...props}/></Canvas>}
+ <CameraDirector bank={p.selected} mode={p.mode} interior={p.interior} expanded={p.expanded} section={p.section} journey={p.journey} paused={p.paused} onStep={p.onStep} onComplete={p.onComplete} focus={p.focus} nonce={p.nonce}/>
+ </>}
+export default function BankWorld(props:WorldProps){const [mobile,setMobile]=useState(false);useEffect(()=>{const m=window.matchMedia('(max-width: 760px)');setMobile(m.matches);const change=()=>setMobile(m.matches);m.addEventListener('change',change);return()=>m.removeEventListener('change',change)},[]);return <Canvas shadows={!props.low&&!mobile} dpr={[1,props.low||mobile?1:1.5]} camera={{position:[76,64,90],fov:48,near:.3,far:400}} gl={{antialias:true,alpha:false,powerPreference:'high-performance'}} onCreated={({gl})=>{gl.domElement.setAttribute('aria-label','โลกธนาคาร 3D หมุน เลื่อน และซูมได้');gl.domElement.setAttribute('tabindex','0')}}><Scene {...props} low={props.low||mobile}/></Canvas>}
