@@ -1,0 +1,6 @@
+{
+ "excludedCategories":["Total loans","Retail loans","Retail total","Business total","Overall impaired loans"],
+ "excludeInTaxonomy":{"Business segment":["Housing","Personal","Credit Card","Leasing","Others"]},
+ "destinations":{"Corporate":"corporate","Private Corporate":"corporate","Corporate loans":"corporate","Commercial loans":"corporate","SME":"sme","Micro SME":"sme","Business SME":"sme","Retail":"retail","Other retail":"retail","Personal":"retail","Housing":"housing","Housing loans":"housing","Real estate business":"housing","Hire purchase":"auto","Auto hire purchase":"auto","Loans against auto licenses":"auto","Government + SOE":"government","Other":"other","Others":"other","Debt management":"other","Lombard":"other"},
+ "companyTaxonomies":["Loan portfolio by company"]
+}

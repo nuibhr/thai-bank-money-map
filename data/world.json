@@ -1,0 +1,40 @@
+{
+ "banks":[
+ {"ticker":"KBANK","position":[-12,0,-7],"height":13,"shape":"terraces","accent":"#65b89b"},
+ {"ticker":"SCB","position":[-3,0,-11],"height":15,"shape":"spire","accent":"#b7a3dc"},
+ {"ticker":"KTB","position":[7,0,-8],"height":14,"shape":"twins","accent":"#73bcdc"},
+ {"ticker":"BBL","position":[15,0,0],"height":16,"shape":"obelisk","accent":"#7d9dce"},
+ {"ticker":"TTB","position":[7,0,8],"height":11,"shape":"ribbon","accent":"#e8aa7b"},
+ {"ticker":"KKP","position":[-3,0,10],"height":12,"shape":"crown","accent":"#b6b4d4"},
+ {"ticker":"TISCO","position":[-12,0,4],"height":10,"shape":"lantern","accent":"#91b7be"}],
+ "origins":[
+ {"id":"household","label":"เงินออมครัวเรือน","en":"HOUSEHOLD SAVINGS","position":[-40,0,-16],"kind":"residential"},
+ {"id":"salary","label":"รายได้และเงินเดือน","en":"SALARY / FREELANCE","position":[-48,0,-5],"kind":"offices"},
+ {"id":"sme-cash","label":"เงินหมุนเวียน SME","en":"SME CASH","position":[-44,0,9],"kind":"shops"},
+ {"id":"corporate-cash","label":"เงินฝากบริษัท","en":"CORPORATE FUNDING","position":[-33,0,-28],"kind":"offices"},
+ {"id":"wealth","label":"ลูกค้ามั่งคั่ง","en":"WEALTH DEPOSITS","position":[-29,0,-38],"kind":"hotel"},
+ {"id":"public","label":"เงินทุนภาครัฐ","en":"PUBLIC FUNDS","position":[-46,0,23],"kind":"government"},
+ {"id":"wholesale","label":"ระหว่างธนาคาร / เงินกู้ยืม","en":"WHOLESALE FUNDING","position":[-22,0,-28],"kind":"offices"},
+ {"id":"equity","label":"ทุนผู้ถือหุ้น","en":"EQUITY CAPITAL","position":[-11,0,-34],"kind":"capital"}],
+ "sectors":[
+ {"id":"manufacturing","label":"การผลิต","en":"MANUFACTURING","position":[35,0,-27],"kind":"factory"},
+ {"id":"housing","label":"ที่อยู่อาศัย / อสังหา","en":"PROPERTY / HOUSING","position":[43,0,-14],"kind":"residential"},
+ {"id":"tourism","label":"ท่องเที่ยว","en":"TOURISM","position":[49,0,0],"kind":"hotel"},
+ {"id":"sme","label":"SME / การค้า","en":"SME / COMMERCE","position":[39,0,12],"kind":"shops"},
+ {"id":"auto","label":"รถยนต์ / เช่าซื้อ","en":"AUTO / HIRE PURCHASE","position":[45,0,27],"kind":"factory"},
+ {"id":"agriculture","label":"เกษตร","en":"AGRICULTURE","position":[28,0,27],"kind":"farm"},
+ {"id":"energy","label":"พลังงาน","en":"ENERGY","position":[27,0,-36],"kind":"energy"},
+ {"id":"infrastructure","label":"โครงสร้างพื้นฐาน","en":"INFRASTRUCTURE","position":[43,0,-38],"kind":"logistics"},
+ {"id":"retail","label":"ผู้บริโภค / รายย่อย","en":"CONSUMER / RETAIL","position":[26,0,15],"kind":"shops"},
+ {"id":"government","label":"ภาครัฐ / รัฐวิสาหกิจ","en":"GOVERNMENT / SOE","position":[29,0,-15],"kind":"government"},
+ {"id":"corporate","label":"สินเชื่อธุรกิจ","en":"CORPORATE / BUSINESS","position":[29,0,1],"kind":"offices"},
+ {"id":"wealth-services","label":"ตลาดทุน / บริการการเงิน","en":"CAPITAL MARKETS","position":[12,0,-33],"kind":"offices"},
+ {"id":"other","label":"สินเชื่ออื่น / ไม่จำแนก","en":"OTHER / UNCLASSIFIED","position":[20,0,22],"kind":"logistics"}],
+ "engines":[
+ {"id":"risk","label":"ความเสี่ยง / NPL","en":"RISK RESERVOIR","position":[-32,0,33]},
+ {"id":"provision","label":"สำรอง / ECL","en":"PROVISION MACHINE","position":[-18,0,34]},
+ {"id":"costs","label":"ค่าใช้จ่าย / ภาษี","en":"COSTS / TAX","position":[-10,0,25]},
+ {"id":"profit","label":"กำไรสุทธิ","en":"PROFIT ENGINE","position":[-3,0,34]},
+ {"id":"capital","label":"เงินกองทุน","en":"CAPITAL FORTRESS","position":[10,0,35]},
+ {"id":"shareholders","label":"ผู้ถือหุ้น / ปันผล","en":"SHAREHOLDER RETURN","position":[23,0,42]}]
+}
