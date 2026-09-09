@@ -1,5 +1,6 @@
 'use client';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import {useCallback,useEffect,useState} from 'react';
 import WorldBoundary from '@/components/WorldBoundary';
 import ResearchPanel from '@/components/ResearchPanel';
@@ -34,7 +35,7 @@ export default function Home(){
  const rightOpen=!!selected||mode==='compare'||mode==='valuation'||mode==='risk';
  return <main className={`bank-app v3 ${journey?'is-journey':''}`}>
  <WorldBoundary><BankWorld onReady={markReady} selected={selected} onSelect={choose} onEnter={enter} interior={interior} expanded={expanded} section={section} metric={metric} onSection={openSection} onMetric={setMetric} mode={mode} data={data} sector={sector} onPlace={onPlace} onStream={onStream} journey={journey} paused={paused} onStep={setStep} onComplete={complete} focus={focus} nonce={nonce} stress={stress} comparison={comparison} low={low} onValuation={onValuation}/></WorldBoundary>
- <header className="brand-header"><button onClick={overview}><span>หนุ่มนักออม</span><strong>THAI BANK MONEY MAP</strong></button><div className="header-caption">เข้าใจหุ้นแบงก์ ผ่านเส้นทางของเงิน</div><div className="header-settings"><button onClick={()=>setBeginner(b=>!b)}>{beginner?'BEGINNER':'INVESTOR'}</button><button onClick={()=>setLow(v=>!v)} aria-pressed={low}>{low?'คุณภาพเบา':'คุณภาพสูง'}</button></div></header>
+ <header className="brand-header"><button className="brand-home" onClick={overview} aria-label="หนุ่มนักออม — กลับสู่ภาพรวม"><Image className="brand-logo" src="/brand/noom-nak-aom.png" alt="" width={48} height={48} sizes="(max-width: 650px) 38px, 48px" priority/><div className="brand-wordmark"><span>หนุ่มนักออม</span><strong>THAI BANK MONEY MAP</strong></div></button><div className="header-caption">เข้าใจหุ้นแบงก์ ผ่านเส้นทางของเงิน</div><div className="header-settings"><button onClick={()=>setBeginner(b=>!b)}>{beginner?'BEGINNER':'INVESTOR'}</button><button onClick={()=>setLow(v=>!v)} aria-pressed={low}>{low?'คุณภาพเบา':'คุณภาพสูง'}</button></div></header>
  <nav className="exploration-modes" aria-label="มุมมองการสำรวจ">{modes.map(m=><button key={m.id} onClick={()=>changeMode(m.id)} aria-pressed={mode===m.id}>{m.label}</button>)}</nav>
  <div className="world-navigation"><button onClick={overview}>THAI BANKING WORLD</button>{selected&&<><span>›</span><button onClick={()=>choose(selected)}>{selected.ticker}</button></>}{section&&<><span>›</span><span>{sections.find(s=>s.id===section)?.label}</span></>}</div>
  <aside className="stack-navigation"><small>{modes.find(m=>m.id===mode)?.en}</small><h1>{interior?selected?.ticker:'เงินฝาก\nไม่ได้หยุด\nอยู่ในบัญชี'}</h1><p>{interior?'สำรวจกลไกภายในธนาคาร':'ตามเงิน ตามความเสี่ยง ตามกำไร แล้วค่อยดูราคา'}</p><button className="hero-follow" disabled={!worldReady} title={worldReady?'เดินทางตามอนุภาคในโลก 3D':'รอฉาก 3D พร้อมใช้งาน'} onClick={startJourney}>▶ FOLLOW ฿100 <b>↗</b></button><div className="stack-title">{interior?'ภายในธนาคาร · 6 ชั้น':mode==='funding'?'ต้นทางเงินทุน':mode==='sectors'?'ปลายทางในเศรษฐกิจ':'เลือกธนาคาร · 7 แห่ง'}</div>
